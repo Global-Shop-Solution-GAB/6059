@@ -1,0 +1,2454 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.F_Tooling..Create(BaseForm)
+Gui.F_Tooling..Caption("Tooling Part Dashboard (6059)")
+Gui.F_Tooling..Size(1021,621)
+Gui.F_Tooling..MinX(0)
+Gui.F_Tooling..MinY(0)
+Gui.F_Tooling..Position(0,0)
+Gui.F_Tooling..AlwaysOnTop(False)
+Gui.F_Tooling..FontName("Tahoma")
+Gui.F_Tooling..FontSize(8.25)
+Gui.F_Tooling..ControlBox(True)
+Gui.F_Tooling..MaxButton(True)
+Gui.F_Tooling..MinButton(True)
+Gui.F_Tooling..MousePointer(0)
+Gui.F_Tooling..Moveable(True)
+Gui.F_Tooling..Sizeable(True)
+Gui.F_Tooling..ShowInTaskBar(True)
+Gui.F_Tooling..TitleBar(True)
+Gui.F_Tooling..Event(UnLoad,F_Tooling_UnLoad)
+Gui.F_Tooling.cmdRefresh.Create(Button)
+Gui.F_Tooling.cmdRefresh.Enabled(True)
+Gui.F_Tooling.cmdRefresh.Visible(True)
+Gui.F_Tooling.cmdRefresh.Zorder(0)
+Gui.F_Tooling.cmdRefresh.Size(66,47)
+Gui.F_Tooling.cmdRefresh.Position(6,8)
+Gui.F_Tooling.cmdRefresh.Caption("Refresh")
+Gui.F_Tooling.cmdRefresh.FontName("Tahoma")
+Gui.F_Tooling.cmdRefresh.FontSize(8)
+Gui.F_Tooling.cmdRefresh.ToolTip("Refresh")
+Gui.F_Tooling.cmdRefresh.ImageAlign(8)
+Gui.F_Tooling.cmdRefresh.SvgPictureSize(36,36)
+Gui.F_Tooling.cmdRefresh.Event(Click,RefreshScreen)
+Gui.F_Tooling.picGSSLogo.Create(PictureBox)
+Gui.F_Tooling.picGSSLogo.Enabled(True)
+Gui.F_Tooling.picGSSLogo.Visible(True)
+Gui.F_Tooling.picGSSLogo.Zorder(0)
+Gui.F_Tooling.picGSSLogo.Size(233,62)
+Gui.F_Tooling.picGSSLogo.Position(84,9)
+Gui.F_Tooling.picGSSLogo.SvgPictureSize(240,240)
+Gui.F_Tooling.tabTooling.Create(Tab)
+Gui.F_Tooling.tabTooling.Enabled(True)
+Gui.F_Tooling.tabTooling.Visible(True)
+Gui.F_Tooling.tabTooling.Zorder(0)
+Gui.F_Tooling.tabTooling.Size(1004,495)
+Gui.F_Tooling.tabTooling.Position(8,91)
+Gui.F_Tooling.tabTooling.FontName("Tahoma")
+Gui.F_Tooling.tabTooling.FontSize(8)
+Gui.F_Tooling.tabTooling.Event(Click,tabTooling_Click)
+Gui.F_Tooling.tabTooling.Tabs(2)
+Gui.F_Tooling.tabTooling.SetTab(0)
+Gui.F_Tooling.tabTooling.Caption("Open")
+Gui.F_Tooling.tabTooling.SetTab(1)
+Gui.F_Tooling.tabTooling.Caption("History")
+Gui.F_Tooling.gsgcToolingHistory.Create(GsGridControl)
+Gui.F_Tooling.gsgcToolingHistory.Enabled(True)
+Gui.F_Tooling.gsgcToolingHistory.Visible(True)
+Gui.F_Tooling.gsgcToolingHistory.Zorder(0)
+Gui.F_Tooling.gsgcToolingHistory.Size(1002,466)
+Gui.F_Tooling.gsgcToolingHistory.Position(0,0)
+Gui.F_Tooling.gsgcToolingHistory.Parent("tabTooling",1)
+Gui.F_Tooling.gsgcToolingHistory.Dock(5)
+Gui.F_Tooling.gsgcToolingOpen.Create(GsGridControl)
+Gui.F_Tooling.gsgcToolingOpen.Enabled(True)
+Gui.F_Tooling.gsgcToolingOpen.Visible(True)
+Gui.F_Tooling.gsgcToolingOpen.Zorder(0)
+Gui.F_Tooling.gsgcToolingOpen.Size(1002,466)
+Gui.F_Tooling.gsgcToolingOpen.Position(0,0)
+Gui.F_Tooling.gsgcToolingOpen.Parent("tabTooling",0)
+Gui.F_Tooling.gsgcToolingOpen.Event(RowCellClick,gsgcToolingOpen_RowCellClick)
+Gui.F_Tooling.gsgcToolingOpen.Dock(5)
+Gui.F_Tooling.gsgcToolingOpen.Event(CellValueChanged,gsgcToolingOpen_CellValueChanged)
+Gui.F_Tooling.frame1.Create(Frame)
+Gui.F_Tooling.frame1.Enabled(True)
+Gui.F_Tooling.frame1.Visible(True)
+Gui.F_Tooling.frame1.Zorder(0)
+Gui.F_Tooling.frame1.Size(281,36)
+Gui.F_Tooling.frame1.Position(729,10)
+Gui.F_Tooling.frame1.Caption("")
+Gui.F_Tooling.frame1.FontName("Tahoma")
+Gui.F_Tooling.frame1.FontSize(8.25)
+Gui.F_Tooling.frame1.Anchor(9)
+Gui.F_Tooling.lbl1.Create(Label,"Job Order Date Start From",True,128,13,0,19,11,True,0,"Tahoma",8.25,,0,0)
+Gui.F_Tooling.lbl1.BorderStyle(0)
+Gui.F_Tooling.lbl1.Parent("frame1")
+Gui.F_Tooling.dtpJobOrderDate.Create(DatePicker)
+Gui.F_Tooling.dtpJobOrderDate.Enabled(True)
+Gui.F_Tooling.dtpJobOrderDate.Visible(True)
+Gui.F_Tooling.dtpJobOrderDate.Zorder(0)
+Gui.F_Tooling.dtpJobOrderDate.Size(97,20)
+Gui.F_Tooling.dtpJobOrderDate.Position(169,7)
+Gui.F_Tooling.dtpJobOrderDate.CheckBox(False)
+Gui.F_Tooling.dtpJobOrderDate.FontName("Tahoma")
+Gui.F_Tooling.dtpJobOrderDate.FontSize(8.25)
+Gui.F_Tooling.dtpJobOrderDate.Parent("frame1")
+Gui.F_Tooling.lkupEmployeeName.Create(Lookup)
+Gui.F_Tooling.lkupEmployeeName.Enabled(True)
+Gui.F_Tooling.lkupEmployeeName.PopulateMode(0)
+Gui.F_Tooling.lkupEmployeeName.Title("Employees")
+Gui.F_Tooling.lkupEmployeeName.StringBasis("")
+Gui.F_Tooling.lkupEmployeeName.FileBasis("")
+Gui.F_Tooling.lkupEmployeeName.ColumnDelim("")
+Gui.F_Tooling.lkupEmployeeName.RowDelim("")
+Gui.F_Tooling.lkupEmployeeName.PreferredStyle(0)
+Gui.F_Tooling.lkupEmployeeName.LookupMode(17)
+Gui.F_Tooling.lkupEmployeeName.Event(SelectionMade,lkupEmployeeName_SelectionMade)
+Gui.F_Tooling.lkupWorkcenter.Create(Lookup)
+Gui.F_Tooling.lkupWorkcenter.Enabled(True)
+Gui.F_Tooling.lkupWorkcenter.PopulateMode(4)
+Gui.F_Tooling.lkupWorkcenter.Title("Workcenter")
+Gui.F_Tooling.lkupWorkcenter.StringBasis("")
+Gui.F_Tooling.lkupWorkcenter.FileBasis("")
+Gui.F_Tooling.lkupWorkcenter.ColumnDelim("")
+Gui.F_Tooling.lkupWorkcenter.RowDelim("")
+Gui.F_Tooling.lkupWorkcenter.PreferredStyle(0)
+Gui.F_Tooling.lkupWorkcenter.Event(SelectionMade,lkupWorkcenter_SelectionMade)
+Gui.F_IssueMatl..Create(BaseForm)
+Gui.F_IssueMatl..Caption("Tooling Part Dashboard (6059) - Issue Material")
+Gui.F_IssueMatl..Size(854,361)
+Gui.F_IssueMatl..MinX(0)
+Gui.F_IssueMatl..MinY(0)
+Gui.F_IssueMatl..Position(0,0)
+Gui.F_IssueMatl..AlwaysOnTop(False)
+Gui.F_IssueMatl..FontName("Tahoma")
+Gui.F_IssueMatl..FontSize(8.25)
+Gui.F_IssueMatl..MousePointer(0)
+Gui.F_IssueMatl..Moveable(True)
+Gui.F_IssueMatl..Sizeable(False)
+Gui.F_IssueMatl..ShowInTaskBar(True)
+Gui.F_IssueMatl..TitleBar(True)
+Gui.F_IssueMatl..Event(UnLoad,F_IssueMatl_UnLoad)
+Gui.F_IssueMatl..ControlBox(True)
+Gui.F_IssueMatl..MaxButton(True)
+Gui.F_IssueMatl..MinButton(True)
+Gui.F_IssueMatl.lbl1.Create(Label,"Part:",True,33,16,0,14,24,True,0,"Tahoma",10,,0,0)
+Gui.F_IssueMatl.lbl1.BorderStyle(0)
+Gui.F_IssueMatl.lbl1.FontStyle(True,False,False,False,False)
+Gui.F_IssueMatl.lblPart.Create(Label,"lblPart",True,36,16,0,51,24,True,0,"Tahoma",10,,0,0)
+Gui.F_IssueMatl.lblPart.BorderStyle(0)
+Gui.F_IssueMatl.lbl2.Create(Label,"Job:",True,27,16,0,14,6,True,0,"Tahoma",10,,0,0)
+Gui.F_IssueMatl.lbl2.BorderStyle(0)
+Gui.F_IssueMatl.lbl2.FontStyle(True,False,False,False,False)
+Gui.F_IssueMatl.lblJob.Create(Label,"lblJob",True,32,16,0,46,6,True,0,"Tahoma",10,,0,0)
+Gui.F_IssueMatl.lblJob.BorderStyle(0)
+Gui.F_IssueMatl.lbl3.Create(Label,"Sequence:",True,68,16,0,327,6,True,0,"Tahoma",10,,0,0)
+Gui.F_IssueMatl.lbl3.BorderStyle(0)
+Gui.F_IssueMatl.lbl3.FontStyle(True,False,False,False,False)
+Gui.F_IssueMatl.lblSeq.Create(Label,"lblSeq",True,35,16,0,399,6,True,0,"Tahoma",10,,0,0)
+Gui.F_IssueMatl.lblSeq.BorderStyle(0)
+Gui.F_IssueMatl.lblQtyOnhand.Create(Label,"lblQtyOnhand",True,76,16,0,148,60,True,10,"Tahoma",10,,0,0)
+Gui.F_IssueMatl.lblQtyOnhand.BorderStyle(0)
+Gui.F_IssueMatl.lbl4.Create(Label,"Onhand Qty:",True,81,16,0,13,60,True,0,"Tahoma",10,,0,0)
+Gui.F_IssueMatl.lbl4.BorderStyle(0)
+Gui.F_IssueMatl.lbl4.FontStyle(True,False,False,False,False)
+Gui.F_IssueMatl.gsgcLotBin.Create(GsGridControl)
+Gui.F_IssueMatl.gsgcLotBin.Enabled(True)
+Gui.F_IssueMatl.gsgcLotBin.Visible(True)
+Gui.F_IssueMatl.gsgcLotBin.Zorder(0)
+Gui.F_IssueMatl.gsgcLotBin.Size(837,203)
+Gui.F_IssueMatl.gsgcLotBin.Position(9,118)
+Gui.F_IssueMatl.gsgcLotBin.Anchor(15)
+Gui.F_IssueMatl.lbl5.Create(Label,"Suffix:",True,41,16,0,168,6,True,0,"Tahoma",10,,0,0)
+Gui.F_IssueMatl.lbl5.BorderStyle(0)
+Gui.F_IssueMatl.lbl5.FontStyle(True,False,False,False,False)
+Gui.F_IssueMatl.lblSuffix.Create(Label,"lblSuffix",True,46,16,0,214,6,True,0,"Tahoma",10,,0,0)
+Gui.F_IssueMatl.lblSuffix.BorderStyle(0)
+Gui.F_IssueMatl.cmdOK.Create(Button)
+Gui.F_IssueMatl.cmdOK.Enabled(True)
+Gui.F_IssueMatl.cmdOK.Visible(True)
+Gui.F_IssueMatl.cmdOK.Zorder(0)
+Gui.F_IssueMatl.cmdOK.Size(75,23)
+Gui.F_IssueMatl.cmdOK.Position(12,87)
+Gui.F_IssueMatl.cmdOK.Caption("OK")
+Gui.F_IssueMatl.cmdOK.FontName("Tahoma")
+Gui.F_IssueMatl.cmdOK.FontSize(10)
+Gui.F_IssueMatl.cmdOK.Event(Click,F_IssueMatl_cmdOK_Click)
+Gui.F_IssueMatl.cmdCancel.Create(Button)
+Gui.F_IssueMatl.cmdCancel.Enabled(True)
+Gui.F_IssueMatl.cmdCancel.Visible(True)
+Gui.F_IssueMatl.cmdCancel.Zorder(0)
+Gui.F_IssueMatl.cmdCancel.Size(75,23)
+Gui.F_IssueMatl.cmdCancel.Position(97,87)
+Gui.F_IssueMatl.cmdCancel.Caption("Cancel")
+Gui.F_IssueMatl.cmdCancel.FontName("Tahoma")
+Gui.F_IssueMatl.cmdCancel.FontSize(10)
+Gui.F_IssueMatl.cmdCancel.Event(Click,F_IssueMatl_cmdCancel_Click)
+Gui.F_IssueMatl.lbl6.Create(Label,"Remaining Required Qty:",True,160,16,0,355,60,True,0,"Tahoma",10,,0,0)
+Gui.F_IssueMatl.lbl6.BorderStyle(0)
+Gui.F_IssueMatl.lbl6.FontStyle(True,False,False,False,False)
+Gui.F_IssueMatl.lblQtyRemainingToIssue.Create(Label,"lblQtyRemainingToIssue",True,137,16,0,562,60,True,10,"Tahoma",10,,0,0)
+Gui.F_IssueMatl.lblQtyRemainingToIssue.BorderStyle(0)
+Gui.F_IssueMatl.lblLocLabel.Create(Label,"Loc:",True,27,16,0,441,23,True,0,"Tahoma",10,,0,0)
+Gui.F_IssueMatl.lblLocLabel.BorderStyle(0)
+Gui.F_IssueMatl.lblLocLabel.FontStyle(True,False,False,False,False)
+Gui.F_IssueMatl.lblLoc.Create(Label,"lblLoc",True,32,16,0,478,23,True,0,"Tahoma",10,,0,0)
+Gui.F_IssueMatl.lblLoc.BorderStyle(0)
+Gui.F_IssueMatl.lbl7.Create(Label,"Description:",True,78,16,0,14,42,True,0,"Tahoma",10,,0,0)
+Gui.F_IssueMatl.lbl7.BorderStyle(0)
+Gui.F_IssueMatl.lbl7.FontStyle(True,False,False,False,False)
+Gui.F_IssueMatl.lblDescription.Create(Label,"lblDescription",True,76,16,0,101,42,True,0,"Tahoma",10,,0,0)
+Gui.F_IssueMatl.lblDescription.BorderStyle(0)
+Gui.F_ItemMaster..Create(BaseForm)
+Gui.F_ItemMaster..Caption("Tooling Part Dashboard (6059) - Item Master")
+Gui.F_ItemMaster..Size(783,322)
+Gui.F_ItemMaster..MinX(0)
+Gui.F_ItemMaster..MinY(0)
+Gui.F_ItemMaster..Position(0,0)
+Gui.F_ItemMaster..AlwaysOnTop(False)
+Gui.F_ItemMaster..FontName("Tahoma")
+Gui.F_ItemMaster..FontSize(8.25)
+Gui.F_ItemMaster..ControlBox(True)
+Gui.F_ItemMaster..MaxButton(True)
+Gui.F_ItemMaster..MinButton(True)
+Gui.F_ItemMaster..MousePointer(0)
+Gui.F_ItemMaster..Moveable(True)
+Gui.F_ItemMaster..Sizeable(True)
+Gui.F_ItemMaster..ShowInTaskBar(True)
+Gui.F_ItemMaster..TitleBar(True)
+Gui.F_ItemMaster..Event(UnLoad,F_ItemMaster_UnLoad)
+Gui.F_ItemMaster.lbl1.Create(Label,"Part:",True,33,16,0,15,16,True,0,"Tahoma",10,,0,0)
+Gui.F_ItemMaster.lbl1.BorderStyle(0)
+Gui.F_ItemMaster.lbl1.FontStyle(True,False,False,False,False)
+Gui.F_ItemMaster.lblPart.Create(Label,"lblPart",True,36,16,0,54,16,True,0,"Tahoma",10,,0,0)
+Gui.F_ItemMaster.lblPart.BorderStyle(0)
+Gui.F_ItemMaster.lblDescription.Create(Label,"lblDescription",True,76,16,0,100,36,True,0,"Tahoma",10,,0,0)
+Gui.F_ItemMaster.lblDescription.BorderStyle(0)
+Gui.F_ItemMaster.lbl4.Create(Label,"Description:",True,78,16,0,16,36,True,0,"Tahoma",10,,0,0)
+Gui.F_ItemMaster.lbl4.BorderStyle(0)
+Gui.F_ItemMaster.lbl4.FontStyle(True,False,False,False,False)
+Gui.F_ItemMaster.gsgcItemMaster.Create(GsGridControl)
+Gui.F_ItemMaster.gsgcItemMaster.Enabled(True)
+Gui.F_ItemMaster.gsgcItemMaster.Visible(True)
+Gui.F_ItemMaster.gsgcItemMaster.Zorder(0)
+Gui.F_ItemMaster.gsgcItemMaster.Size(760,217)
+Gui.F_ItemMaster.gsgcItemMaster.Position(12,65)
+Gui.F_ItemMaster.gsgcItemMaster.Anchor(15)
+Gui.F_ItemMaster.lbl2.Create(Label,"Loc:",True,27,16,0,447,15,True,0,"Tahoma",10,,0,0)
+Gui.F_ItemMaster.lbl2.BorderStyle(0)
+Gui.F_ItemMaster.lbl2.FontStyle(True,False,False,False,False)
+Gui.F_ItemMaster.lblLoc.Create(Label,"lblPart",True,36,16,0,482,15,True,0,"Tahoma",10,,0,0)
+Gui.F_ItemMaster.lblLoc.BorderStyle(0)
+Gui.F_ItemMaster.lbl3.Create(Label,"Onhand Qty:",True,81,16,0,545,35,True,0,"Tahoma",10,,0,0)
+Gui.F_ItemMaster.lbl3.BorderStyle(0)
+Gui.F_ItemMaster.lbl3.FontStyle(True,False,False,False,False)
+Gui.F_ItemMaster.lblQtyOnhand.Create(Label,"lblQtyOnhand",True,76,16,0,684,35,True,0,"Tahoma",10,,0,0)
+Gui.F_ItemMaster.lblQtyOnhand.BorderStyle(0)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+	V.Global.sError.Declare
+	V.Global.bLoadData.Declare
+	V.Global.lProgId.Declare
+	V.Global.sKeyword.Declare
+	V.Global.sGSSLogo.Declare
+	V.Global.iJobStreamID.Declare
+	V.Global.iJobStreamSeqID.Declare
+	V.Global.sMessageTitle.Declare
+	V.Global.sRptID.Declare
+	V.Global.iBISeq.Declare(Long,0)
+	V.Global.iIssuedCnt.Declare(Long,0)
+	V.Global.sJob.Declare
+	V.Global.sSuffix.Declare
+	V.Global.sSeq.Declare
+	V.Global.sPart.Declare
+	V.Global.sLoc.Declare 
+	V.Global.sDescription.Declare
+	V.Global.fQtyOnhand.Declare
+	V.Global.fQtyRemainingToIssue.Declare
+	V.Global.sNoImageLogo.Declare
+	V.Global.iSelectedRow.Declare
+	V.Global.sEmployeeName.Declare
+	V.Global.sWorkcenter.Declare
+Program.External.Include.Library("450100.lib")
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+	V.Local.sQuery.Declare
+	V.Local.sText.Declare
+	V.Local.dJobOrderDate.Declare
+	
+	F.Intrinsic.Control.Try
+		Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+				
+		V.Global.iJobStreamID.Set(533)			'Issue Material Job Stream ID is 533
+'		V.Global.iJobStreamSeqID.Set(533)       'Issue Material Job Stream Seq ID is 533
+		V.Global.lProgId.Set(6059)              'GAB Program ID 
+		V.Global.sRptID.Set("001862")			'Audit Trail BI Report is 001862
+		V.Global.sKeyword.Set("TOOLING")		'Document Control Link keyword
+		V.Global.sMessageTitle.Set("Tooling Requirement and Historical Dashboard [APAC]")   'MsgBox Title
+		F.Intrinsic.String.Build("{0}\ART\GAB_GSS_Logo_Green_Dash.png",V.Caller.GlobalDir,V.Global.sGssLogo)
+		F.Intrinsic.String.Build("{0}\PLUGINS\GAB\GAS\GAB_6059_NoImage.png",V.Caller.GlobalDir,V.Global.sNoImageLogo)
+		
+		Gui.F_Tooling.picGSSLogo.Picture(V.Global.sGSSLogo)
+		Gui.F_Tooling.picGSSLogo.SizeMode(V.Enum.PictureBoxSizeMode!Stretch)	
+			
+		V.Local.sText.Set("Tooling Requirement and Historical Dashboard [APAC]")
+		Gui.F_Tooling..Caption(V.Local.sText)
+		
+		V.Local.sText.Set("Tooling Requirement and Historical Dashboard [APAC]- Issue Material")
+		Gui.F_IssueMatl..Caption(V.Local.sText)
+		
+		F.Intrinsic.Date.DateAdd("M",-12,V.Ambient.Date,V.Local.dJobOrderDate)
+		Gui.F_Tooling.dtpJobOrderDate.Value(v.Local.dJobOrderDate)
+		
+		Gui.F_Tooling.tabTooling.SetTab(0)
+		Gui.F_Tooling.frame1.Visible(False)
+		F.Intrinsic.Control.CallSub(SetAnchors)
+				
+		Gui.F_Tooling..Show()
+		
+		F.ODBC.Connection!myCon.OpenConnection(V.Ambient.PDSN, V.Ambient.PUser, V.Ambient.PPass,180)
+		
+		F.Intrinsic.Control.CallSub(CheckCustomTables)
+		F.Intrinsic.Control.CallSub(SetContextMenu)
+		F.Intrinsic.Control.CallSub(RefreshScreen)
+
+		'Clear out the BI_SF_AUDIT table and open a connection to the table for audit trail data input
+		F.Intrinsic.String.Build("DELETE FROM BI_SF_AUDIT WHERE TRMNL = '{0}'",V.Caller.Terminal,V.Local.sQuery)
+		F.ODBC.Connection!myCon.Execute(V.Local.sQuery)
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.SetAnchors.Start
+	F.Intrinsic.Control.Try
+		V.Local.sError.Declare
+		
+		'0 - None
+		'1 - Top
+		'2 - Bottom
+		'4 - Left
+		'8 - Right
+		
+		'Gui.F_Tooling.picGSSLogo.Anchor(1)
+'		Gui.F_Tooling.picTooling.Anchor(9)
+		Gui.F_Tooling.tabTooling.Anchor(15)
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndTry
+Program.Sub.SetAnchors.End
+
+Program.Sub.CheckCustomTables.Start
+	f.Intrinsic.Control.Try
+		V.Local.bExist.Declare
+		
+		F.ODBC.Connection!myCon.TableExists("GAB_6059_TOOL_HIST",v.Local.bExist)
+		F.Intrinsic.Control.If(v.Local.bExist.Not)
+			F.ODBC.Connection!myCon.Execute("CREATE TABLE GAB_6059_TOOL_HIST(JOB CHAR(6) NOT NULL, SUFFIX CHAR(3) NOT NULL, SEQ CHAR(6) NOT NULL, DATE_HISTORY CHAR(6) NOT NULL, INV_HIST_TIME CHAR(8) NOT NULL, EMP_NAME CHAR(30) NOT NULL DEFAULT '', WORKCENTER CHAR(4) NOT NULL DEFAULT '');")
+			F.ODBC.Connection!myCon.Execute("CREATE INDEX GAB_6059_TOOL_HIST00 ON GAB_6059_TOOL_HIST ( JOB, SUFFIX, SEQ );")
+		F.Intrinsic.Control.EndIf
+			
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndTry
+Program.Sub.CheckCustomTables.End
+
+Program.Sub.LoadDtDvToolingOpen.Start
+	V.Local.sSQL.Declare
+	V.Local.bDictPictureExists.Declare
+	V.Local.bDictMultiBinExists.Declare
+	V.Local.iRow.Declare
+	V.Local.sJob.Declare
+	V.Local.sSuffix.Declare
+	V.Local.sRouter.Declare
+	V.Local.sSeq.Declare
+	V.Local.sNextSeqDesc.Declare
+	V.Local.sImageArray.Declare("ByteArray")
+	
+	F.Intrinsic.Control.Try
+		
+		F.Intrinsic.Control.If(V.DataTable.dtToolingOpen.Exists,=,True)
+			F.Data.DataTable.Close("dtToolingOpen")
+		F.Intrinsic.Control.EndIf
+		
+		V.Global.bLoadData.Set(True)
+		
+		V.Local.sSQL.Set("SELECT CONCAT(a.JOB, a.SUFFIX) AS JS, CONCAT(a.PART, a.LOCN) AS PartLoc, '' AS ISSUE, CONVERT(IF(e.FLAG_LOT = 'Y', 1, 0), SQL_BIT) AS LotBin, CONVERT(0, SQL_BIT) AS MultiBin, CONVERT(0.00, SQL_FLOAT) AS QTY_TO_ISSUE, RTRIM(a.PART) AS PART, RTRIM(a.LOCN) AS LOC, RTRIM(a.DESCRIPTION) AS DESCRIPTION, a.UM, a.HOURS_ESTIMATED AS QTY_COMMITTED, a.HOURS_ACTUAL AS QTY_ISSUED, e.QTY_ONHAND, '' AS NEXT_SEQ_DESC, a.JOB, a.SUFFIX, a.SEQ, c.QTY_ORDER, a.LMO, a.ROUTER, a.ROUTER_SEQ, a.SETUP, a.FREQUENCY, RTRIM(d.NAME_CUSTOMER) AS CUSTOMER_NAME, c.PART AS FG_PART, c.DESCRIPTION AS FG_DESCRIPTION, c.DATE_START, c.DATE_DUE FROM V_JOB_OPERATIONS a LEFT JOIN V_JOB_HEADER c ON a.JOB = c.JOB AND a.SUFFIX = c.SUFFIX LEFT JOIN V_CUSTOMER_MASTER d ON d.CUSTOMER = c.CUSTOMER LEFT JOIN V_INVENTORY_MSTR e ON e.PART = a.PART WHERE a.FLAG_CLOSED <> 'Y' AND a.TOOLING_SEQ = 'Y' ORDER BY a.PART, a.DESCRIPTION, a.JOB, a.SUFFIX, a.SEQ")
+		F.Data.DataTable.CreateFromSQL("dtToolingOpen", "myCon", V.Local.sSQL, True)
+		
+		F.Data.DataTable.AddColumn("dtToolingOpen","Image","ByteArray")	
+		F.Data.DataTable.AddColumn("dtToolingOpen","FILE_NAME","String","")
+		F.Data.DataTable.AddColumn("dtToolingOpen","EmployeeName","String","")
+		F.Data.DataTable.AddColumn("dtToolingOpen","EmployeeNameLU","String","")
+		F.Data.DataTable.AddColumn("dtToolingOpen","Workcenter","String","")
+		F.Data.DataTable.AddColumn("dtToolingOpen","WorkcenterLU","String","")
+
+		F.Data.DataTable.FillFromDictionary("dtToolingOpen","dictFileName","PART","FILE_NAME")
+		F.Data.DataTable.FillFromDictionary("dtToolingOpen","dictPicture","PART","Image")
+		
+		'Delete dictionary if it exists
+		F.Data.Dictionary.Exists("dictMultiBin", V.Local.bDictMultiBinExists)
+		F.Intrinsic.Control.If(V.Local.bDictMultiBinExists,=,True)
+			F.Data.Dictionary.Close("dictMultiBin")
+		F.Intrinsic.Control.EndIf
+		
+		'Creating dictionary whether the PART exists in Multiple Bins where the Bin Qty is greater than ZERO
+		V.Local.sSQL.Set("SELECT CONCAT(a.PART,a.LOCATION) AS PartLoc, CONVERT(IF(b.BinCount > 1, 1, 0), SQL_BIT) AS MultiBin FROM V_INVENTORY_MSTR a LEFT JOIN (SELECT PART, LOCATION, COUNT(BIN) AS BinCount FROM V_ITEM_MASTER WHERE QUANTITY > 0 GROUP BY PART, LOCATION) b ON a.PART = b.PART AND a.LOCATION = b.LOCATION WHERE a.FLAG_LOT = 'Y'")
+		F.Data.Dictionary.CreateFromSQL("dictMultiBin", "myCon", V.Local.sSQL)
+		F.Data.Dictionary.SetDefaultReturn("dictMultiBin", False)
+		F.Data.DataTable.FillFromDictionary("dtToolingOpen", "dictMultiBin", "PartLoc", "MultiBin")
+		F.Data.Dictionary.Close("dictMultiBin")
+		
+'		f.Data.Dictionary.CreateFromSQL("dNextSeq","myCon","select A.JOB + A.SUFFIX as JS, A.DESCRIPTION AS NEXT_SEQ_DESC from V_JOB_OPERATIONS A LEFT JOIN (select JOB, SUFFIX, MIN(SEQ) AS MinSeq from V_JOB_OPERATIONS where FLAG_CLOSED <> 'Y' and LMO IN ('L','O') group by JOB, SUFFIX order by JOB, SUFFIX) X ON A.JOB = X.JOB and A.SUFFIX = X.SUFFIX where A.FLAG_CLOSED <> 'Y' and A.LMO IN ('L','O') and A.SEQ = X.MinSeq AND A.SEQ < '995000' order by A.JOB, A.SUFFIX, A.SEQ")	
+'		f.Data.Dictionary.SetDefaultReturn("dNextSeq","Wip To FG")
+'		f.Data.DataTable.FillFromDictionary("dtToolingOpen","dNextSeq","JS","NEXT_SEQ_DESC")
+'		f.Data.Dictionary.Close("dNextSeq")
+		
+		F.Data.DataView.Create("dtToolingOpen", "dvToolingOpen")
+			
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadDtDvToolingOpen.End
+
+Program.Sub.LoadDtDvToolingHistory.Start
+	V.Local.sSQL.Declare()
+	V.Local.bDictPictureExists.Declare()
+	V.Local.iRow.Declare
+	V.Local.sJob.Declare
+	V.Local.sSuffix.Declare
+	V.Local.sRouter.Declare
+	V.Local.sSeq.Declare
+	V.Local.sNextSeqDesc.Declare
+	V.Local.sImageArray.Declare("ByteArray")
+	V.Local.dJobOrderDate.Declare
+	
+	F.Intrinsic.Control.Try
+		
+		F.Intrinsic.Control.If(V.DataTable.dtToolingHistory.Exists,=,True)
+			F.Data.DataTable.Close("dtToolingHistory")
+		F.Intrinsic.Control.EndIf
+		
+		V.Global.bLoadData.Set(True)
+		
+		'Get the Job Sequences where the Material Sequence is marked as Tooling with Job Order Date greater than the Date entered on the screen
+'		V.Local.sSQL.Set("SELECT CONCAT(a.JOB, a.SUFFIX) AS JS, RTRIM(a.PART) AS PART, RTRIM(a.LOCN) AS LOC, RTRIM(a.DESCRIPTION) AS DESCRIPTION, a.UM, a.HOURS_ESTIMATED AS QTY_COMMITTED, a.HOURS_ACTUAL AS QTY_ISSUED, '' AS NEXT_SEQ_DESC, a.JOB, a.SUFFIX, a.SEQ, c.QTY_ORDER, a.LMO, a.ROUTER, a.ROUTER_SEQ, a.SETUP, a.FREQUENCY, RTRIM(d.NAME_CUSTOMER) AS CUSTOMER_NAME, c.PART AS FG_PART, c.DESCRIPTION AS FG_DESCRIPTION, c.DATE_START, c.DATE_DUE, a.DATE_COMPLETED FROM V_JOB_OPERATIONS a LEFT JOIN V_JOB_HEADER c ON a.JOB = c.JOB AND a.SUFFIX = c.SUFFIX LEFT JOIN V_CUSTOMER_MASTER d ON d.CUSTOMER = c.CUSTOMER WHERE a.FLAG_CLOSED = 'Y' AND a.TOOLING_SEQ = 'Y' ORDER BY a.PART, a.DESCRIPTION, a.JOB, a.SUFFIX, a.SEQ")
+		V.Local.dJobOrderDate.Set(v.Screen.F_Tooling!dtpJobOrderDate.Value)
+		F.Intrinsic.String.Build("SELECT CONCAT(a.JOB, a.SUFFIX) AS JS, RTRIM(a.PART) AS PART, RTRIM(a.LOCN) AS LOC, RTRIM(a.DESCRIPTION) AS DESCRIPTION, a.UM, a.HOURS_ESTIMATED AS QTY_COMMITTED, a.HOURS_ACTUAL AS QTY_ISSUED, '' AS NEXT_SEQ_DESC, a.JOB, a.SUFFIX, a.SEQ, c.QTY_ORDER, a.LMO, a.ROUTER, a.ROUTER_SEQ, a.SETUP, a.FREQUENCY, RTRIM(d.NAME_CUSTOMER) AS CUSTOMER_NAME, c.PART AS FG_PART, c.DESCRIPTION AS FG_DESCRIPTION, c.DATE_OPENED, c.DATE_START, c.DATE_DUE, a.DATE_COMPLETED FROM V_JOB_OPERATIONS a LEFT JOIN V_JOB_HEADER c ON a.JOB = c.JOB AND a.SUFFIX = c.SUFFIX LEFT JOIN V_CUSTOMER_MASTER d ON d.CUSTOMER = c.CUSTOMER WHERE c.DATE_OPENED >= '{0}' AND a.TOOLING_SEQ = 'Y' ORDER BY a.PART, a.DESCRIPTION, a.JOB, a.SUFFIX, a.SEQ",v.Local.dJobOrderDate.PervasiveDate,v.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtToolingHistory","myCon",V.Local.sSQL,True)
+		
+		F.Data.DataTable.AddColumn("dtToolingHistory","Image","ByteArray")
+		F.Data.DataTable.AddColumn("dtToolingHistory","FILE_NAME","String","")
+		
+		F.Data.DataTable.FillFromDictionary("dtToolingHistory","dictFileName","PART","FILE_NAME")
+		F.Data.DataTable.FillFromDictionary("dtToolingHistory","dictPicture","PART","Image")
+		
+'		f.Data.Dictionary.CreateFromSQL("dNextSeq","myCon","select A.JOB + A.SUFFIX as JS, A.DESCRIPTION AS NEXT_SEQ_DESC from V_JOB_OPERATIONS A LEFT JOIN (select JOB, SUFFIX, MIN(SEQ) AS MinSeq from V_JOB_OPERATIONS where FLAG_CLOSED <> 'Y' and LMO IN ('L','O') group by JOB, SUFFIX order by JOB, SUFFIX) X ON A.JOB + A.SUFFIX = X.JOB + X.SUFFIX where A.FLAG_CLOSED <> 'Y' and A.LMO IN ('L','O') and A.SEQ = X.MinSeq AND A.SEQ < '995000' order by A.JOB, A.SUFFIX, A.SEQ")	
+'		f.Data.Dictionary.SetDefaultReturn("dNextSeq","Wip To FG")
+'		f.Data.DataTable.FillFromDictionary("dtToolingHistory","dNextSeq","JS","NEXT_SEQ_DESC")
+'		f.Data.Dictionary.Close("dNextSeq")
+		
+		'Get the Tooling History Movement Detail of the above Tooling sequences
+		F.Intrinsic.Control.If(V.DataTable.dtToolingHistory$dtChild.Exists,=,True)
+			F.Data.DataTable.Close("dtToolingHistory$dtChild")
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.String.Build("select A.JOB, A.SUFFIX, A.SEQ, RTRIM(A.PART) AS PART, RTRIM(A.LOCATION) AS LOCATION, A.QUANTITY, DATEFROMPARTS('20'+LEFT(A.DATE_HISTORY,2),SUBSTRING(A.DATE_HISTORY,3,2),RIGHT(A.DATE_HISTORY,2)) AS HIST_DATE, TIMEFROMPARTS(LEFT(A.INV_HIST_TIME,2),SUBSTRING(A.INV_HIST_TIME,3,2),SUBSTRING(A.INV_HIST_TIME,5,2),RIGHT(A.INV_HIST_TIME,2),3) AS HIST_TIME, B.EMP_NAME, B.WORKCENTER from INVENTORY_HIST A LEFT JOIN GAB_6059_TOOL_HIST B ON A.JOB = B.JOB and A.SUFFIX = B.SUFFIX and A.SEQ = B.SEQ and A.DATE_HISTORY = B.DATE_HISTORY and A.INV_HIST_TIME = B.INV_HIST_TIME where A.JOB + A.SUFFIX + A.SEQ + A.PART + A.LOCATION IN (SELECT a.JOB + a.SUFFIX + a.SEQ + a.PART + a.LOCN FROM V_JOB_OPERATIONS a LEFT JOIN V_JOB_HEADER c ON a.JOB = c.JOB AND a.SUFFIX = c.SUFFIX WHERE c.DATE_OPENED >= '{0}' AND a.TOOLING_SEQ = 'Y' ORDER BY a.PART, a.DESCRIPTION, a.JOB, a.SUFFIX, a.SEQ) and A.CODE_TRANSACTION = 'J55' ORDER BY A.JOB, A.SUFFIX, A.SEQ, A.PART, A.LOCATION, HIST_DATE DESC, HIST_TIME DESC",v.Local.dJobOrderDate.PervasiveDate,v.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtToolingHistory$dtChild","myCon",V.Local.sSQL,True)
+		
+		'Add relation between both datatables
+		F.Data.DataTable.AddRelation("dtToolingHistory","Job*!*Suffix*!*Seq*!*Part*!*Loc","dtToolingHistory$dtChild","Job*!*Suffix*!*Seq*!*Part*!*Location")
+		
+		F.Data.DataView.Create("dtToolingHistory","dvToolingHistory")
+		F.Data.DataView.Create("dtToolingHistory$dtChild","dvToolingHistoryChild")
+			
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadDtDvToolingHistory.End
+
+Program.Sub.F_Tooling_UnLoad.Start
+	F.Intrinsic.Control.Try
+		
+		F.Intrinsic.Control.If(V.Global.bLoadData)
+			F.Intrinsic.Control.CallSub(Serialize)
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.Control.If(V.DataTable.dtToolingOpen.Exists,=,True)
+			F.Data.DataView.Close("dtToolingOpen","dvToolingOpen")
+			F.Data.DataTable.Close("dtToolingOpen")
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.Control.If(V.DataTable.dtToolingHistory.Exists,=,True)
+			F.Data.DataView.Close("dtToolingHistory","dvToolingHistory")
+			F.Data.DataTable.Close("dtToolingHistory")
+		F.Intrinsic.Control.EndIf
+		
+		F.ODBC.Connection!myCon.Close()
+		
+		'Print Audit Trail Report
+		F.Intrinsic.Control.CallSub(PrintAuditTrail)
+		
+		'End the execution of the program
+		F.Intrinsic.Control.End()
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.F_Tooling_UnLoad.End
+
+Program.Sub.PrintAuditTrail.Start
+	'Print audit material audit trail (Report ID 1862)
+	V.Local.sBIParam.Declare
+	V.Local.sBIParamVal.Declare
+		
+	F.Intrinsic.Control.Try
+	
+		F.Intrinsic.Control.If(V.Global.iIssuedCnt,>,0)
+			F.Intrinsic.String.Split("Terminal*!*Rptid*!*Program*!*HIDECOST","*!*",V.Local.sBIParam)
+			F.Intrinsic.String.Build("{0}*!*{1}*!*GAB_6059_TOOLING_PART.g2u*!*Y",V.Caller.Terminal,V.Global.sRptID,V.Local.sBIParamVal)
+			F.Intrinsic.String.Split(V.Local.sBIParamVal,"*!*",V.Local.sBIParamVal)
+			F.Global.BI.PrintReport(V.Global.sRptID,16,V.Local.sBIParam,V.Local.sBIParamVal,"GSView",False)
+		F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.PrintAuditTrail.End
+
+Program.Sub.CreateNextSeqDictionary.Start
+	V.Local.bDictExists.Declare
+	
+	F.Intrinsic.Control.Try
+
+		'Delete Dictionary if it exists
+		F.Data.Dictionary.Exists("dNextSeq",v.Local.bDictExists)
+		F.Intrinsic.Control.If(v.Local.bDictExists)
+			F.Data.Dictionary.Close("dNextSeq")
+		F.Intrinsic.Control.EndIf
+		
+		'Create Dictionary
+		F.Data.Dictionary.CreateFromSQL("dNextSeq","myCon","select A.JOB + A.SUFFIX as JS, A.DESCRIPTION AS NEXT_SEQ_DESC from V_JOB_OPERATIONS A LEFT JOIN (select JOB, SUFFIX, MIN(SEQ) AS MinSeq from V_JOB_OPERATIONS where FLAG_CLOSED <> 'Y' and LMO IN ('L','O') group by JOB, SUFFIX order by JOB, SUFFIX) X ON A.JOB = X.SUFFIX and A.SUFFIX = X.SUFFIX where A.FLAG_CLOSED <> 'Y' and A.LMO IN ('L','O') and A.SEQ = X.MinSeq AND A.SEQ < '995000' order by A.JOB, A.SUFFIX, A.SEQ")	
+		F.Data.Dictionary.SetDefaultReturn("dNextSeq","Wip To FG")
+			
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndTry
+Program.Sub.CreateNextSeqDictionary.End
+
+Program.Sub.ConvertFileToImageArray.Start
+	V.Local.sSQL.Declare()
+	V.Local.bDictPictureExists.Declare()
+	V.Local.i1.Declare
+	V.Local.sImageArray.Declare("ByteArray")
+	
+	F.Intrinsic.Control.Try
+
+		'Delete DataTable if it exists
+		F.Intrinsic.Control.If(v.DataTable.dtPicture.Exists)
+			F.Data.DataTable.Close("dtPicture")
+		F.Intrinsic.Control.EndIf
+		
+		'Creating dictionary for the path of the Part image filename
+		'F.Intrinsic.String.Build("SELECT RTRIM(a.ID) AS PART, CONCAT(RTRIM(b.PATH), RTRIM(b.FILE)) AS FILE_NAME FROM V_LINK_DATA a LEFT JOIN ATG_DOC_ASSOC b ON CONVERT(a.LINK_ID, SQL_INTEGER) = b.LINK_ID LEFT JOIN ATG_DOC_GRP c ON b.GRP_ID = c.GRP_ID where c.GRP_NAME = '{0}' AND b.DESCRIPTION = '{0}' AND b.FILE_TYPE = 'JPG'", V.Global.sKeyword, V.Local.sSQL)		
+		F.Intrinsic.String.Build("SELECT RTRIM(a.ID) AS PART, CONCAT(RTRIM(b.PATH), RTRIM(b.FILE)) AS FILE_NAME FROM V_LINK_DATA a LEFT JOIN ATG_DOC_ASSOC b ON CONVERT(a.LINK_ID, SQL_INTEGER) = b.LINK_ID LEFT JOIN ATG_DOC_GRP c ON b.GRP_ID = c.GRP_ID where UPPER(c.GRP_NAME) = '{0}' AND UPPER(b.DESCRIPTION) = '{0}'", V.Global.sKeyword, V.Local.sSQL)		
+		F.Data.DataTable.CreateFromSQL("dtPicture", "myCon", V.Local.sSQL)
+		F.Data.DataTable.AddColumn("dtPicture","Image","ByteArray")
+		
+		F.Intrinsic.Control.For(v.Local.i1,0,v.DataTable.dtPicture.RowCount--,1)
+			'Convert file to ByteArray
+			F.Image.File.ToByteArray(V.DataTable.dtPicture(V.Local.i1).FILE_NAME!FieldValTrim,V.Local.sImageArray)
+			F.Data.DataTable.SetValue("dtPicture",V.Local.i1,"Image",V.Local.sImageArray)
+		F.Intrinsic.Control.Next(v.Local.i1)
+		
+		'Delete dictionary if it exists
+		F.Data.Dictionary.Exists("dictPicture", V.Local.bDictPictureExists)
+		F.Intrinsic.Control.If(V.Local.bDictPictureExists,=,True)
+			F.Data.Dictionary.Close("dictPicture")
+		F.Intrinsic.Control.EndIf
+		
+		'Create Dictionary
+		F.Data.Dictionary.CreateFromDataTable("dictPicture","dtPicture","PART","Image")
+		'Convert file to ByteArray
+		F.Image.File.ToByteArray(V.Global.sNoImageLogo,V.Local.sImageArray)
+		F.Data.Dictionary.SetDefaultReturn("dictPicture",V.Local.sImageArray)
+		
+		'Delete dictionary if it exists
+		F.Data.Dictionary.Exists("dictFileName", V.Local.bDictPictureExists)
+		F.Intrinsic.Control.If(V.Local.bDictPictureExists,=,True)
+			F.Data.Dictionary.Close("dictFileName")
+		F.Intrinsic.Control.EndIf
+		
+		'Create Dictionary
+		F.Data.Dictionary.CreateFromDataTable("dictFileName","dtPicture","PART","FILE_NAME")
+		F.Data.Dictionary.SetDefaultReturn("dictFileName","")
+		
+		'Close DataTable
+		F.Data.DataTable.Close("dtPicture")
+			
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndTry
+Program.Sub.ConvertFileToImageArray.End
+
+Program.Sub.RefreshScreen.Start
+	F.Intrinsic.Control.Try
+		
+		F.Intrinsic.UI.InvokeWaitDialog("Loading Tooling Information.....", V.Global.sMessageTitle)
+		
+		F.Intrinsic.Control.CallSub(CreateNextSeqDictionary)
+		F.Intrinsic.Control.CallSub(ConvertFileToImageArray)
+		
+'		Gui.F_Tooling.picTooling.Picture(V.Global.sGSSLogo)
+		'Gui.F_Tooling.picTooling.SizeMode(V.Enum.PictureBoxSizeMode!Center)
+		
+		F.Intrinsic.Control.If(V.Global.bLoadData)
+			F.Intrinsic.Control.CallSub(Serialize)
+			F.Intrinsic.Control.If(V.DataView.dtToolingOpen!dvToolingOpen.Exists,=,True)
+				Gui.F_Tooling.gsgcToolingOpen.ClearRows("gvToolingOpen")
+			F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.If(V.DataView.dtToolingHistory!dvToolingHistory.Exists,=,True)
+				Gui.F_Tooling.gsgcToolingHistory.ClearRows("gvToolingHistoryChild")
+				Gui.F_Tooling.gsgcToolingHistory.ClearRows("gvToolingHistory")
+			F.Intrinsic.Control.EndIf		
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.Control.BlockEvents()
+		F.Intrinsic.Control.CallSub(DisableScreen)
+		
+		'ToolingOpen
+		F.Intrinsic.Control.CallSub(LoadDtDvToolingOpen)
+		F.Intrinsic.Control.CallSub(LoadGvToolingOpen)
+		F.Intrinsic.Control.CallSub(FormatGvToolingOpen)
+		
+		'ToolingHistory
+		F.Intrinsic.Control.CallSub(LoadDtDvToolingHistory)
+		F.Intrinsic.Control.CallSub(LoadGvToolingHistory)
+		F.Intrinsic.Control.CallSub(FormatGvToolingHistory)
+		
+		F.Intrinsic.Control.CallSub(EnableScreen)
+		F.Intrinsic.Control.UnBlockEvents()
+		
+		F.Intrinsic.Control.CallSub(Deserialize)
+		
+		F.Intrinsic.UI.CloseWaitDialog
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndTry
+Program.Sub.RefreshScreen.End
+
+Program.Sub.EnableScreen.Start
+	F.Intrinsic.Control.Try
+	
+		Gui.F_Tooling.gsgcToolingOpen.Visible(True)
+		Gui.F_Tooling.gsgcToolingHistory.Visible(True)
+			
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.EnableScreen.End
+
+Program.Sub.DisableScreen.Start
+	F.Intrinsic.Control.Try
+	
+		Gui.F_Tooling.gsgcToolingOpen.Visible(False)
+		Gui.F_Tooling.gsgcToolingHistory.Visible(False)
+			
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.DisableScreen.End
+
+Program.Sub.Serialize.Start
+	V.Local.sSerialize.Declare()
+	
+	F.Intrinsic.Control.Try
+	
+		' gvToolingOpen
+		Gui.F_Tooling.gsgcToolingOpen.Serialize("gvToolingOpen", V.Local.sSerialize)
+		F.Global.Registry.AddValue(V.Caller.User, V.Caller.CompanyCode, "gvToolingOpen", V.Global.lProgId, 1000, False, "Serialize", False, 0, -999.0, 1/1/1980, 12:00:00 AM, v.Local.sSerialize)
+		
+		' gvToolingHistory
+		Gui.F_Tooling.gsgcToolingHistory.Serialize("gvToolingHistory", V.Local.sSerialize)
+		F.Global.Registry.AddValue(V.Caller.User, V.Caller.CompanyCode, "gvToolingHistory", V.Global.lProgId, 1000, False, "Serialize", False, 0, -999.0, 1/1/1980, 12:00:00 AM, v.Local.sSerialize)
+			
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.Serialize.End
+
+Program.Sub.Deserialize.Start
+	V.Local.sSerialize.Declare()
+	V.Local.sSQL.Declare()
+
+	F.Intrinsic.Control.Try
+		
+		' Delete old registry records
+		F.Global.Registry.ReadValue(V.Caller.User, V.Caller.CompanyCode ,"gvToolingOpen", V.Global.lProgId, 0, 5, "", V.Local.sSerialize)
+		F.Intrinsic.Control.If(V.Local.sSerialize, <>, "")
+			F.ODBC.Connection!common.OpenConnection(V.Ambient.Ccon, V.Ambient.Cuser, V.Ambient.Cpass)
+			F.Intrinsic.String.Build("Delete From Gs_Registry Where Reg_ID = {0} And Seq < 1000;", V.Global.lProgId, V.Local.sSQL)
+			F.ODBC.Connection!common.Execute(V.Local.sSQL)
+			F.ODBC.Connection!common.Close()
+		F.Intrinsic.Control.EndIf
+	
+		' gvToolingOpen
+		F.Global.Registry.ReadValue(V.Caller.User, V.Caller.CompanyCode, "gvToolingOpen", V.Global.lProgId, 1000, 6, "", V.Local.sSerialize)
+		F.Intrinsic.Control.If(V.Local.sSerialize.Trim, <>, "")
+			Gui.F_Tooling.gsgcToolingOpen.Deserialize(V.Local.sSerialize)
+		F.Intrinsic.Control.EndIf
+		
+		' gvToolingHistory
+		F.Global.Registry.ReadValue(V.Caller.User, V.Caller.CompanyCode, "gvToolingHistory", V.Global.lProgId, 1000, 6, "", V.Local.sSerialize)
+		F.Intrinsic.Control.If(V.Local.sSerialize.Trim, <>, "")
+			Gui.F_Tooling.gsgcToolingHistory.Deserialize(V.Local.sSerialize)
+		F.Intrinsic.Control.EndIf
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.Deserialize.End
+
+Program.Sub.LoadGvToolingOpen.Start
+	F.Intrinsic.Control.Try
+		
+		Gui.F_Tooling.gsgcToolingOpen.AddGridviewFromDataview("gvToolingOpen", "dtToolingOpen", "dvToolingOpen")
+		Gui.F_Tooling.gsgcToolingOpen.MainView("gvToolingOpen")
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadGvToolingOpen.End
+
+Program.Sub.LoadGvToolingHistory.Start
+	F.Intrinsic.Control.Try
+			
+		Gui.F_Tooling.gsgcToolingHistory.AddGridviewFromDataview("gvToolingHistory", "dtToolingHistory", "dvToolingHistory")
+		Gui.F_Tooling.gsgcToolingHistory.AddGridviewFromDataview("gvToolingHistoryChild", "dtToolingHistory", "dvToolingHistoryChild")
+		Gui.F_Tooling.gsgcToolingHistory.MainView("gvToolingHistory")	
+				
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadGvToolingHistory.End
+
+Program.Sub.FormatGvToolingOpen.Start
+	V.Local.iRow.Declare
+	V.Local.fQtyRemainingToIssue.Declare
+	V.Local.fQtyOnHand.Declare
+	V.Local.iCnt.Declare
+	V.Local.sCol.Declare
+	V.Local.bDictExists.Declare
+	
+	F.Intrinsic.Control.Try
+
+		Gui.F_Tooling.gsgcToolingOpen.AddStyleFormatCondition("gvToolingOpen","QTY_ONHAND","TAG1","Expression","QTY_ONHAND < (QTY_COMMITTED - QTY_ISSUED)")
+		Gui.F_Tooling.gsgcToolingOpen.SetStyleFormatConditionProperty("gvToolingOpen","QTY_ONHAND","TAG1","BackColor",V.Enum.ThemeColors!ColorRed)
+					
+		'Setting the Image column Size
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","Image", "CellWordWrap","CellWordWrap")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","Image", "Width","150")
+		Gui.F_Tooling.gsgcToolingOpen.SetGridViewProperty("gvToolingOpen","RowHeight",150)
+	
+		Gui.F_Tooling.gsgcToolingOpen.SetGridViewProperty("gvToolingOpen","AllowSort",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetGridViewProperty("gvToolingOpen","AllowFilter",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetGridViewProperty("gvToolingOpen","OptionsViewShowGroupPanel",True)
+'		Gui.F_Tooling.gsgcToolingOpen.SetGridViewProperty("gvToolingOpen","EnableAppearanceOddRow",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetGridViewProperty("gvToolingOpen","OptionsViewColumnAutoWidth",False)
+		
+		'Set Visibility
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","JS","Visible",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","PartLoc","Visible",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","LMO","Visible",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","ROUTER","Visible",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","ROUTER_SEQ","Visible",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","SETUP","Visible",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FREQUENCY","Visible",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FILE_NAME","Visible",False)
+		
+		'Set ISSUE button
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","ISSUE","Fixed","Left")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","ISSUE","ShowCaption",False)
+		Gui.F_Tooling.gsgcToolingOpen.ColumnEdit("gvToolingOpen","ISSUE","EditorButton","Issue")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","ISSUE","ReadOnly",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","ISSUE","AllowEdit",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","ISSUE","CellBackColor",V.Color.LtGray)
+		
+		'Set Column Header Caption
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","Image","Caption","Image")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_TO_ISSUE","Caption","Qty To Issue")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","LotBin","Caption","Lot/Bin")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","MultiBin","Caption","Multi Bin")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","PART","Caption","Tooling ID")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","LOC","Caption","Loc")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DESCRIPTION","Caption","Tooling Description")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","UM","Caption","UoM")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_COMMITTED","Caption","Qty Required")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ISSUED","Caption","Qty Issued")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ONHAND","Caption","Qty OnHand")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","NEXT_SEQ_DESC","Caption","Next WC")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","JOB","Caption","Job")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","SUFFIX","Caption","Suffix")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","SEQ","Caption","Seq")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ORDER","Caption","Job Qty")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","CUSTOMER_NAME","Caption","Customer")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FG_PART","Caption","Part")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FG_DESCRIPTION","Caption","Part Description")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DATE_START","Caption","Start Date")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DATE_DUE","Caption","Due Date")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FILE_NAME","Caption","File Name")
+		
+		'CellWordWrap
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","EmployeeName","CellWordWrap","Wrap")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","Workcenter","CellWordWrap","Wrap")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","PART","CellWordWrap","Wrap")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DESCRIPTION","CellWordWrap","Wrap")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","CUSTOMER_NAME","CellWordWrap","Wrap")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FG_PART","CellWordWrap","Wrap")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FG_DESCRIPTION","CellWordWrap","Wrap")
+		
+		'CellValignment
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","EmployeeName","CellValignment","center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","Workcenter","CellValignment","center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","PART","CellValignment","center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DESCRIPTION","CellValignment","center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","CUSTOMER_NAME","CellValignment","center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FG_PART","CellValignment","center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FG_DESCRIPTION","CellValignment","center")
+		
+		'Set Column Header Alignment
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","Image","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_TO_ISSUE","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","LotBin","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","MultiBin","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","PART","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","LOC","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DESCRIPTION","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","UM","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_COMMITTED","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ISSUED","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ONHAND","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","NEXT_SEQ_DESC","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","JOB","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","SUFFIX","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","SEQ","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ORDER","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","CUSTOMER_NAME","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FG_PART","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FG_DESCRIPTION","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DATE_START","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DATE_DUE","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FILE_NAME","HeaderHAlignment","Center")
+		
+		'Set Column Header Font Style
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","Image","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_TO_ISSUE","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","LotBin","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","MultiBin","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","PART","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","LOC","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DESCRIPTION","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","UM","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_COMMITTED","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ISSUED","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ONHAND","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","NEXT_SEQ_DESC","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","JOB","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","SUFFIX","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","SEQ","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ORDER","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","CUSTOMER_NAME","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FG_PART","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FG_DESCRIPTION","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DATE_START","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DATE_DUE","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FILE_NAME","HeaderFontBold",True)
+		
+		'Set Column Cell Alignment
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","Image","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_TO_ISSUE","CellHAlignment","Right")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","LotBin","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","MultiBin","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","PART","CellHAlignment","Left")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","LOC","CellHAlignment","Left")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DESCRIPTION","CellHAlignment","Left")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","UM","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_COMMITTED","CellHAlignment","Right")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ISSUED","CellHAlignment","Right")
+		'Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ONHAND","CellHAlignment","Right")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","NEXT_SEQ_DESC","CellHAlignment","Left")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","JOB","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","SUFFIX","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","SEQ","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ORDER","CellHAlignment","Right")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","CUSTOMER_NAME","CellHAlignment","Left")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FG_PART","CellHAlignment","Left")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FG_DESCRIPTION","CellHAlignment","Left")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DATE_START","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DATE_DUE","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FILE_NAME","CellHAlignment","Left")
+		
+		'Set Column Cell Width
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","ISSUE","MinWidth",10)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_TO_ISSUE","MinWidth",50)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","LotBin","Width",30)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","MultiBin","Width",30)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","PART","MinWidth",120)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","LOC","Width",40)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DESCRIPTION","MinWidth",120)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","UM","Width",40)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_COMMITTED","MinWidth",50)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ISSUED","MinWidth",50)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ONHAND","MinWidth",50)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","NEXT_SEQ_DESC","MinWidth",100)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","JOB","MinWidth",20)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","SUFFIX","MinWidth",20)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","SEQ","MinWidth",20)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ORDER","MinWidth",50)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","CUSTOMER_NAME","MinWidth",100)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FG_PART","MinWidth",100)	
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FG_DESCRIPTION","MinWidth",150)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DATE_START","MinWidth",40)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DATE_DUE","MinWidth",40)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FILE_NAME","MinWidth",300)
+		
+		'Set Column Cell Format
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_TO_ISSUE","DisplayCustomNumeric",n4)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_COMMITTED","DisplayCustomNumeric",n4)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ISSUED","DisplayCustomNumeric",n4)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ONHAND","DisplayCustomNumeric",n4)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ORDER","DisplayCustomNumeric",n2)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DATE_START","DisplayCustomDatetime","d")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DATE_DUE","DisplayCustomDatetime","d")
+		
+		'Set Column Cell Read/Write
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","Image","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","ISSUE","ReadOnly",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_TO_ISSUE","ReadOnly",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","LotBin","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","MultiBin","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","PART","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","LOC","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DESCRIPTION","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","UM","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_COMMITTED","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ISSUED","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ONHAND","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","NEXT_SEQ_DESC","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","JOB","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","SUFFIX","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","SEQ","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ORDER","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","CUSTOMER_NAME","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FG_PART","ReadOnly",True)	
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FG_DESCRIPTION","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DATE_START","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DATE_DUE","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FILE_NAME","ReadOnly",True)
+		
+		'Set Column Cell Editable
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","Image","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","ISSUE","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_TO_ISSUE","AllowEdit",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","LotBin","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","MultiBin","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","PART","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","LOC","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DESCRIPTION","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","UM","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_COMMITTED","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ISSUED","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ONHAND","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","NEXT_SEQ_DESC","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","JOB","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","SUFFIX","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","SEQ","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ORDER","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","CUSTOMER_NAME","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FG_PART","AllowEdit",False)	
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FG_DESCRIPTION","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DATE_START","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DATE_DUE","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","FILE_NAME","AllowEdit",False)
+		
+		'Set Cell BackColor
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_TO_ISSUE","CellBackColor","LightYellow")
+		
+		'Underline 
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ONHAND","CellFontUnderline",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ONHAND","CellForeColor","Blue")
+		
+		
+		
+		'EmployeeLookup Browse Button
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","EmployeeNameLU","ShowCaption",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","EmployeeNameLU","Width",30)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","EmployeeNameLU","Caption","Employee Search")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","EmployeeNameLU","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","EmployeeNameLU","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","EmployeeNameLU","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","EmployeeNameLU","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","EmployeeNameLU","Icon","Browse")
+		
+		'EmployeeLookup Browse Button
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","WorkcenterLU","ShowCaption",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","WorkcenterLU","Width",30)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","WorkcenterLU","Caption","Workcenter Search")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","WorkcenterLU","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","WorkcenterLU","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","WorkcenterLU","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","WorkcenterLU","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","WorkcenterLU","Icon","Browse")
+		
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","EmployeeName","Caption","Employee")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","EmployeeName","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","EmployeeName","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","EmployeeName","MinWidth",100)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","EmployeeName","CellBackColor","LightYellow")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","EmployeeName","AllowEdit",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","EmployeeName","ReadOnly",False)
+		
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","Workcenter","Caption","Workcenter")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","Workcenter","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","Workcenter","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","Workcenter","MinWidth",80)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","Workcenter","CellBackColor","LightYellow")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","Workcenter","AllowEdit",True)
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","Workcenter","ReadOnly",False)
+		
+		'Set Cell ForeColor
+	'	Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","PART","CellForeColor",V.Enum.ThemeColors!ColorOrange)
+	'	Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DESCRIPTION","CellForeColor",V.Enum.ThemeColors!ColorOrange)
+	'	Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","UM","CellForeColor",V.Enum.ThemeColors!ColorOrange)
+	'	Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_COMMITTED","CellForeColor",V.Enum.ThemeColors!ColorOrange)
+	'	Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ISSUED","CellForeColor",V.Enum.ThemeColors!ColorOrange)
+	'	'Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_ONHAND","CellForeColor",V.Enum.ThemeColors!ColorOrange)
+	'	Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","NEXT_SEQ_DESC","CellForeColor",V.Enum.ThemeColors!ColorOrange)
+		
+		'Set Cell Fixed
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","QTY_TO_ISSUE","Fixed","Left")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","Workcenter","Fixed","Left")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","WorkcenterLU","Fixed","Left")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","EmployeeName","Fixed","Left")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","EmployeeNameLU","Fixed","Left")
+'		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","LotBin","Fixed","Left")
+'		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","MultiBin","Fixed","Left")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","Image","Fixed","Left")
+		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","PART","Fixed","Left")
+'		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","LOC","Fixed","Left")
+'		Gui.F_Tooling.gsgcToolingOpen.SetColumnProperty("gvToolingOpen","DESCRIPTION","Fixed","Left")
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndTry
+Program.Sub.FormatGvToolingOpen.End
+
+Program.Sub.lkupEmployeeName_SelectionMade.Start
+	F.Intrinsic.Control.Try
+		
+		F.Data.DataTable.SetValue("dtToolingOpen",v.Global.iSelectedRow,"EmployeeName",v.Object.lkupEmployeeName_Result(0).Name.Full!FieldValTrim)
+		F.Data.DataTable.AcceptChanges("dtToolingOpen")
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndTry
+Program.Sub.lkupEmployeeName_SelectionMade.End
+
+Program.Sub.lkupWorkcenter_SelectionMade.Start
+	F.Intrinsic.Control.Try
+		
+		F.Data.DataTable.SetValue("dtToolingOpen",v.Global.iSelectedRow,"Workcenter",v.DataTable.lkupWorkcenter_Result(0).Workcenter!FieldValTrim)
+		F.Data.DataTable.AcceptChanges("dtToolingOpen")
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndTry
+Program.Sub.lkupWorkcenter_SelectionMade.End
+
+Program.Sub.FormatGvToolingHistory.Start
+	F.Intrinsic.Control.Try
+		
+		'Set the image column size
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","Image", "CellWordWrap","CellWordWrap")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","Image", "Width","150")
+		Gui.F_Tooling.gsgcToolingHistory.SetGridViewProperty("gvToolingHistory","RowHeight",150)
+		
+		Gui.F_Tooling.gsgcToolingHistory.SetGridViewProperty("gvToolingHistory","AllowSort",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetGridViewProperty("gvToolingHistory","AllowFilter",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetGridViewProperty("gvToolingHistory","OptionsViewShowGroupPanel",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetGridViewProperty("gvToolingHistory","EnableAppearanceOddRow",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetGridViewProperty("gvToolingHistory","OptionsViewColumnAutoWidth",False)
+		
+		'GvToolingHistory
+		'Set Visibility
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","JS","Visible",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","LMO","Visible",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","ROUTER","Visible",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","ROUTER_SEQ","Visible",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","SETUP","Visible",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FREQUENCY","Visible",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FILE_NAME","Visible",False)
+		
+		'Set Column Header Caption
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","Image","Caption","Image")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","PART","Caption","Tooling ID")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","LOC","Caption","Loc")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DESCRIPTION","Caption","Tooling Description")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","UM","Caption","UoM")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_COMMITTED","Caption","Qty Required")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_ISSUED","Caption","Qty Issued")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","NEXT_SEQ_DESC","Caption","Next WC")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","JOB","Caption","Job")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","SUFFIX","Caption","Suffix")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","SEQ","Caption","Seq")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_ORDER","Caption","Job Qty")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","CUSTOMER_NAME","Caption","Customer")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FG_PART","Caption","Part")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FG_DESCRIPTION","Caption","Part Description")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_OPENED","Caption","Order Date")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_START","Caption","Start Date")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_DUE","Caption","Due Date")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_COMPLETED","Caption","Seq Close Date")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FILE_NAME","Caption","File Name")
+		
+		'CellWordWrap
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","PART","CellWordWrap","Wrap")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DESCRIPTION","CellWordWrap","Wrap")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","CUSTOMER_NAME","CellWordWrap","Wrap")
+		
+		'CellValignment
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","PART","CellValignment","center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DESCRIPTION","CellValignment","center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","CUSTOMER_NAME","CellValignment","center")
+		
+		'Set Column Header Alignment
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","Image","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","PART","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","LOC","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DESCRIPTION","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","UM","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_COMMITTED","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_ISSUED","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","NEXT_SEQ_DESC","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","JOB","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","SUFFIX","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","SEQ","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_ORDER","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","CUSTOMER_NAME","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FG_PART","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FG_DESCRIPTION","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_OPENED","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_START","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_DUE","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_COMPLETED","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FILE_NAME","HeaderHAlignment","Center")
+		
+		'Set Column Header Font Style
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","Image","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","PART","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","LOC","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DESCRIPTION","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","UM","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_COMMITTED","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_ISSUED","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","NEXT_SEQ_DESC","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","JOB","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","SUFFIX","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","SEQ","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_ORDER","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","CUSTOMER_NAME","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FG_PART","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FG_DESCRIPTION","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_OPENED","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_START","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_DUE","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_COMPLETED","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FILE_NAME","HeaderFontBold",True)
+		
+		'Set Column Cell Alignment
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","Image","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","PART","CellHAlignment","Left")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","LOC","CellHAlignment","Left")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DESCRIPTION","CellHAlignment","Left")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","UM","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_COMMITTED","CellHAlignment","Right")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_ISSUED","CellHAlignment","Right")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","NEXT_SEQ_DESC","CellHAlignment","Left")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","JOB","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","SUFFIX","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","SEQ","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_ORDER","CellHAlignment","Right")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","CUSTOMER_NAME","CellHAlignment","Left")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FG_PART","CellHAlignment","Left")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FG_DESCRIPTION","CellHAlignment","Left")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_OPENED","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_START","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_DUE","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_COMPLETED","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FILE_NAME","CellHAlignment","Left")
+		
+		'Set Column Cell Width
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","PART","MinWidth",120)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","LOC","MinWidth",10)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DESCRIPTION","MinWidth",200)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","UM","MinWidth",10)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_COMMITTED","MinWidth",50)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_ISSUED","MinWidth",50)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","NEXT_SEQ_DESC","MinWidth",100)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","JOB","MinWidth",20)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","SUFFIX","MinWidth",20)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","SEQ","MinWidth",20)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_ORDER","MinWidth",50)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","CUSTOMER_NAME","MinWidth",150)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FG_PART","MinWidth",100)	
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FG_DESCRIPTION","MinWidth",150)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_OPENED","MinWidth",40)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_START","MinWidth",40)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_DUE","MinWidth",40)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_COMPLETED","MinWidth",40)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FILE_NAME","MinWidth",300)
+		
+		'Set Column Cell Format
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_COMMITTED","DisplayCustomNumeric",n4)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_ISSUED","DisplayCustomNumeric",n4)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_ORDER","DisplayCustomNumeric",n2)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_OPENED","DisplayCustomDatetime","d")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_START","DisplayCustomDatetime","d")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_DUE","DisplayCustomDatetime","d")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_COMPLETED","DisplayCustomDatetime","d")
+		
+		'Set Column Cell Read/Write
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","Image","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","PART","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","LOC","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DESCRIPTION","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","UM","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_COMMITTED","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_ISSUED","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","NEXT_SEQ_DESC","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","JOB","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","SUFFIX","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","SEQ","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_ORDER","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","CUSTOMER_NAME","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FG_PART","ReadOnly",True)	
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FG_DESCRIPTION","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_OPENED","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_START","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_DUE","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_COMPLETED","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FILE_NAME","ReadOnly",True)
+		
+		'Set Column Cell Editable
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","Image","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","PART","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","LOC","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DESCRIPTION","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","UM","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_COMMITTED","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_ISSUED","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","NEXT_SEQ_DESC","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","JOB","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","SUFFIX","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","SEQ","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_ORDER","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","CUSTOMER_NAME","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FG_PART","AllowEdit",False)	
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FG_DESCRIPTION","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_OPENED","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_START","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_DUE","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DATE_COMPLETED","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","FILE_NAME","AllowEdit",False)
+		
+		'Set Cell ForeColor
+	'	Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","PART","CellForeColor",V.Enum.ThemeColors!ColorOrange)
+	'	Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DESCRIPTION","CellForeColor",V.Enum.ThemeColors!ColorOrange)
+	'	Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","UM","CellForeColor",V.Enum.ThemeColors!ColorOrange)
+	'	Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_COMMITTED","CellForeColor",V.Enum.ThemeColors!ColorOrange)
+	'	Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","QTY_ISSUED","CellForeColor",V.Enum.ThemeColors!ColorOrange)
+	'	Gui.F_Tooling.gsgcToolingHitory.SetColumnProperty("gvToolingHistory","NEXT_SEQ_DESC","CellForeColor",V.Enum.ThemeColors!ColorOrange)
+		
+		'Set Cells Fixed
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","Image","Fixed","Left")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","PART","Fixed","Left")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","LOC","Fixed","Left")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistory","DESCRIPTION","Fixed","Left")
+		
+		'GvToolingHistoryChild
+		'Set Visibility
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","JOB","Visible",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","SUFFIX","Visible",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","SEQ","Visible",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","PART","Visible",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","LOCATION","Visible",False)
+		
+		'Set Column Header Caption
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","JOB","Caption","Job")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","SUFFIX","Caption","Suffix")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","SEQ","Caption","Seq")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","PART","Caption","Tooling ID")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","LOCATION","Caption","Loc")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","QUANTITY","Caption","Qty")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","HIST_DATE","Caption","Date History")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","HIST_TIME","Caption","Time History")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","EMP_NAME","Caption","Emp Name")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","WORKCENTER","Caption","Workcenter")
+
+		'Set Column Header Alignment
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","JOB","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","SUFFIX","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","SEQ","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","PART","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","LOCATION","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","QUANTITY","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","HIST_DATE","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","HIST_TIME","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","EMP_NAME","HeaderHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","WORKCENTER","HeaderHAlignment","Center")
+		
+		'Set Column Header Font Style
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","JOB","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","SUFFIX","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","SEQ","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","PART","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","LOCATION","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","QUANTITY","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","HIST_DATE","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","HIST_TIME","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","EMP_NAME","HeaderFontBold",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","WORKCENTER","HeaderFontBold",True)
+		
+		'Set Column Cell Alignment
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","JOB","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","SUFFIX","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","SEQ","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","PART","CellHAlignment","Left")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","LOCATION","CellHAlignment","Left")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","QUANTITY","CellHAlignment","Right")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","HIST_DATE","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","HIST_TIME","CellHAlignment","Center")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","EMP_NAME","CellHAlignment","Left")
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","WORKCENTER","CellHAlignment","Left")
+		
+		'Set Column Cell Width
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","JOB","Width",60)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","SUFFIX","Width",40)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","SEQ","Width",60)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","PART","Width",120)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","LOCATION","Width",30)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","QUANTITY","Width",50)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","HIST_DATE","Width",80)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","HIST_TIME","Width",80)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","EMP_NAME","Width",120)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","WORKCENTER","Width",60)
+		
+		'Set Column Cell Format
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","QUANTITY","DisplayCustomNumeric",n4)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","HIST_DATE","DisplayCustomDatetime","d")
+		
+		'Set Column Cell Read/Write
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","JOB","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","SUFFIX","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","SEQ","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","PART","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","LOCATION","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","QUANTITY","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","HIST_DATE","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","HIST_TIME","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","EMP_NAME","ReadOnly",True)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","WORKCENTER","ReadOnly",True)
+		
+		'Set Column Cell Editable
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","JOB","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","SUFFIX","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","SEQ","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","PART","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","LOCATION","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","QUANTITY","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","HIST_DATE","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","HIST_TIME","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","EMP_NAME","AllowEdit",False)
+		Gui.F_Tooling.gsgcToolingHistory.SetColumnProperty("gvToolingHistoryChild","WORKCENTER","AllowEdit",False)
+		
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndTry	
+Program.Sub.FormatGvToolingHistory.End
+
+Program.Sub.FormatGvLotBin.Start
+	F.Intrinsic.Control.Try
+	
+		'Set GridView Property
+		Gui.F_IssueMatl.gsgcLotBin.SetGridViewProperty("gvLotBin","AllowSort",True)
+		Gui.F_IssueMatl.gsgcLotBin.SetGridViewProperty("gvLotBin","AllowFilter",True)
+		Gui.F_IssueMatl.gsgcLotBin.SetGridViewProperty("gvLotBin","OptionsViewShowGroupPanel",True)
+		Gui.F_IssueMatl.gsgcLotBin.SetGridViewProperty("gvLotBin","EnableAppearanceOddRow",True)
+		Gui.F_IssueMatl.gsgcLotBin.SetGridViewProperty("gvLotBin","OptionsViewColumnAutoWidth",False)
+		'Gui.F_IssueMatl.gsgcLotBin.SetGridViewProperty("gvLotBin","MultiSelectMode",V.Enum.MultiselectMode!CellSelect)
+		
+		'Set Column Header Caption
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","LOT","Caption","Lot")
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","BIN","Caption","Bin")
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","HEAT","Caption","Heat")
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","SERIAL","Caption","Serial")
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","ExpDate","Caption","Exp Date")
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","QTY_ONHAND","Caption","Qty OnHand")
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","QTY_TO_ISSUE","Caption","Qty To Issue")
+		
+		'Set Column Header Alignment
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","LOT","HeaderHAlignment","Center")
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","BIN","HeaderHAlignment","Center")
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","HEAT","HeaderHAlignment","Center")
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","SERIAL","HeaderHAlignment","Center")
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","ExpDate","HeaderHAlignment","Center")
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","QTY_ONHAND","HeaderHAlignment","Center")
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","QTY_TO_ISSUE","HeaderHAlignment","Center")
+		
+		'Set Column Header Font Style
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","LOT","HeaderFontBold",True)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","BIN","HeaderFontBold",True)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","HEAT","HeaderFontBold",True)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","SERIAL","HeaderFontBold",True)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","ExpDate","HeaderFontBold",True)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","QTY_ONHAND","HeaderFontBold",True)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","QTY_TO_ISSUE","HeaderFontBold",True)
+		
+		'Set Column Cell Alignment
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","LOT","CellHAlignment","Left")
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","BIN","CellHAlignment","Left")
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","HEAT","CellHAlignment","Left")
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","SERIAL","CellHAlignment","Left")
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","ExpDate","CellHAlignment","Center")
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","QTY_ONHAND","CellHAlignment","Right")
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","QTY_TO_ISSUE","CellHAlignment","Right")
+		
+		'Set Column Cell Width
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","LOT","MinWidth",120)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","BIN","MinWidth",60)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","HEAT","MinWidth",120)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","SERIAL","MinWidth",180)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","ExpDate","MinWidth",20)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","QTY_ONHAND","MinWidth",100)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","QTY_TO_ISSUE","MinWidth",100)
+		
+		'Set Column Cell Format
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","QTY_TO_ISSUE","DisplayCustomNumeric",n4)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","QTY_ONHAND","DisplayCustomNumeric",n4)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","ExpDate","DisplayCustomDatetime","d")
+		
+		'Set Column Cell Read/Write
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","LOT","ReadOnly",True)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","BIN","ReadOnly",True)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","HEAT","ReadOnly",True)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","SERIAL","ReadOnly",False)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","ExpDate","ReadOnly",True)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","QTY_ONHAND","ReadOnly",True)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","QTY_TO_ISSUE","ReadOnly",False)
+		
+		'Set Column Cell Editable
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","LOT","AllowEdit",False)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","BIN","AllowEdit",False)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","HEAT","AllowEdit",False)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","SERIAL","AllowEdit",True)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","ExpDate","AllowEdit",False)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","QTY_ONHAND","AllowEdit",False)
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","QTY_TO_ISSUE","AllowEdit",True)
+		
+		'Set Cell BackColor
+		Gui.F_IssueMatl.gsgcLotBin.SetColumnProperty("gvLotBin","QTY_TO_ISSUE","CellBackColor","LightGreen")
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndTry
+Program.Sub.FormatGvLotBin.End
+
+Program.Sub.FormatGvItemMaster.Start
+	F.Intrinsic.Control.Try
+	
+		'Set GridView Property
+		Gui.F_ItemMaster.gsgcItemMaster.SetGridViewProperty("gvItemMaster","AllowSort",True)
+		Gui.F_ItemMaster.gsgcItemMaster.SetGridViewProperty("gvItemMaster","AllowFilter",True)
+		Gui.F_ItemMaster.gsgcItemMaster.SetGridViewProperty("gvItemMaster","OptionsViewShowGroupPanel",True)
+		Gui.F_ItemMaster.gsgcItemMaster.SetGridViewProperty("gvItemMaster","EnableAppearanceOddRow",True)
+		Gui.F_ItemMaster.gsgcItemMaster.SetGridViewProperty("gvItemMaster","OptionsViewColumnAutoWidth",False)
+		'Gui.F_ItemMaster.gsgcItemMaster.SetGridViewProperty("gvItemMaster","MultiSelectMode",V.Enum.MultiselectMode!CellSelect)
+		
+		'Set Column Header Caption
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","LOT","Caption","Lot")
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","BIN","Caption","Bin")
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","HEAT","Caption","Heat")
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","SERIAL","Caption","Serial")
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","ExpDate","Caption","Exp Date")
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","QTY_ONHAND","Caption","Qty OnHand")
+		
+		'Set Column Header Alignment
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","LOT","HeaderHAlignment","Center")
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","BIN","HeaderHAlignment","Center")
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","HEAT","HeaderHAlignment","Center")
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","SERIAL","HeaderHAlignment","Center")
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","ExpDate","HeaderHAlignment","Center")
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","QTY_ONHAND","HeaderHAlignment","Center")
+		
+		'Set Column Header Font Style
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","LOT","HeaderFontBold",True)
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","BIN","HeaderFontBold",True)
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","HEAT","HeaderFontBold",True)
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","SERIAL","HeaderFontBold",True)
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","ExpDate","HeaderFontBold",True)
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","QTY_ONHAND","HeaderFontBold",True)
+		
+		'Set Column Cell Alignment
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","LOT","CellHAlignment","Left")
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","BIN","CellHAlignment","Left")
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","HEAT","CellHAlignment","Left")
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","SERIAL","CellHAlignment","Left")
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","ExpDate","CellHAlignment","Center")
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","QTY_ONHAND","CellHAlignment","Right")
+		
+		'Set Column Cell Width
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","LOT","MinWidth",120)
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","BIN","MinWidth",60)
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","HEAT","MinWidth",120)
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","SERIAL","MinWidth",180)
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","ExpDate","MinWidth",20)
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","QTY_ONHAND","MinWidth",100)
+		
+		'Set Column Cell Format
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","QTY_ONHAND","DisplayCustomNumeric","n4")
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","ExpDate","DisplayCustomDatetime","d")
+		
+		'Set Column Cell Read/Write
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","LOT","ReadOnly",True)
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","BIN","ReadOnly",True)
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","HEAT","ReadOnly",True)
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","SERIAL","ReadOnly",False)
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","ExpDate","ReadOnly",True)
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","QTY_ONHAND","ReadOnly",True)
+		
+		'Set Column Cell Editable
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","LOT","AllowEdit",False)
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","BIN","AllowEdit",False)
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","HEAT","AllowEdit",False)
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","SERIAL","AllowEdit",True)
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","ExpDate","AllowEdit",False)
+		Gui.F_ItemMaster.gsgcItemMaster.SetColumnProperty("gvItemMaster","QTY_ONHAND","AllowEdit",False)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndTry
+Program.Sub.FormatGvItemMaster.End
+
+Program.Sub.SetContextMenu.Start
+	F.Intrinsic.Control.Try
+	
+		Gui.F_Tooling..ContextMenuCreate("ctxTooling")
+		Gui.F_Tooling.gsgcToolingOpen.ContextMenuAttach("ctxTooling")
+		Gui.F_Tooling.gsgcToolingHistory.ContextMenuAttach("ctxTooling")
+		
+		Gui.F_Tooling..ContextMenuAddItem("ctxTooling", "Refresh", 0, "Refresh")
+		Gui.F_Tooling..ContextMenuAddItem("ctxTooling", "Export", 0, "Export")
+		Gui.F_Tooling..ContextMenuAddItem("ctxTooling", "ResetColumns", 0, "Reset Columns")
+		
+		Gui.F_Tooling..ContextMenuSetItemEventHandler("ctxTooling", "Refresh", "ContextMenuRefresh")
+		Gui.F_Tooling..ContextMenuSetItemEventHandler("ctxTooling", "Export", "ContextMenuExport")
+		Gui.F_Tooling..ContextMenuSetItemEventHandler("ctxTooling", "ResetColumns", "ContextMenuReset")
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.SetContextMenu.End
+
+Program.Sub.ContextMenuRefresh.Start
+	F.Intrinsic.Control.Try
+	
+		F.Intrinsic.Control.CallSub(RefreshScreen)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.ContextMenuRefresh.End
+
+Program.Sub.ContextMenuReset.Start
+	F.Intrinsic.Control.Try
+		
+		' Delete the saved serializations.
+		F.Global.Registry.AddValue(V.Caller.User , V.Caller.CompanyCode, "gvToolingOpen", V.Global.lProgId, 1000, False, "Serialize", False, 0, -999.0, 1/1/1980, 12:00:00 AM, "")
+		F.Global.Registry.AddValue(V.Caller.User , V.Caller.CompanyCode, "gvToolingHistory", V.Global.lProgId, 1000, False, "Serialize", False, 0, -999.0, 1/1/1980, 12:00:00 AM, "")
+		
+		' Prevent RefreshScreen from doing Serialize.
+		V.Global.bLoadData.Set(False)
+		
+		F.Intrinsic.Control.CallSub(RefreshScreen)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.ContextMenuReset.End
+
+'Program.Sub.gsgcToolingOpen_RowClick.Start
+'	V.Local.sFileName.Declare
+'	V.Local.bFileExists.Declare
+'	
+'	F.Intrinsic.Control.Try
+'	
+'		Gui.F_Tooling.gsgcToolingOpen.GetCellValueByColumnName("gvToolingOpen","FILE_NAME",V.Args.RowIndex,V.Local.sFileName)
+'		F.Intrinsic.Control.If(V.Local.sFileName,<>,"")
+'			F.Intrinsic.File.Exists(V.Local.sFileName,V.Local.bFileExists)
+'			F.Intrinsic.Control.If(V.Local.bFileExists,=,True)
+'				Gui.F_Tooling.picTooling.Picture(V.Local.sFileName)
+'				Gui.F_Tooling.picTooling.SizeMode(V.Enum.PictureBoxSizeMode!Zoom)
+'			F.Intrinsic.Control.Else
+'				Gui.F_Tooling.picTooling.Picture(V.Global.sGSSLogo)
+'				Gui.F_Tooling.picTooling.SizeMode(V.Enum.PictureBoxSizeMode!Stretch)
+'			F.Intrinsic.Control.EndIf
+'		F.Intrinsic.Control.EndIf
+'		
+'	F.Intrinsic.Control.Catch
+'		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+'		F.Intrinsic.UI.Msgbox(V.Global.sError)
+'		F.Intrinsic.Control.End()
+'	F.Intrinsic.Control.EndTry
+'Program.Sub.gsgcToolingOpen_RowClick.End
+
+Program.Sub.gsgcToolingOpen_RowCellClick.Start
+	V.Local.sQtyOnhand.Declare
+	V.Local.sBin.Declare
+	V.Local.SHeat.Declare
+	V.Local.sLot.Declare
+	V.Local.sSerial.Declare
+	V.Local.fQtyToIssue.Declare
+	V.Local.sQtyToIssue.Declare
+	V.Local.sQuery.Declare
+	V.Local.iRow.Declare
+	V.Local.bDictExists.Declare
+	V.Local.sCol.Declare
+	V.Local.iCnt.Declare
+	V.Local.fQtyRemainingToIssue.Declare
+	V.Local.sQtyRemainingToIssue.Declare
+	V.Local.sTranTimeBegin.Declare
+	V.Local.sTranTimeEnd.Declare
+	
+	F.Intrinsic.Control.Try
+				
+		'Set the RowIndex selected by user
+		V.Local.iRow.Set(V.Args.RowIndex)
+		V.Global.iSelectedRow.Set(v.Args.RowIndex)
+		
+		F.Intrinsic.Control.SelectCase(V.Args.Column.UCase)
+			F.Intrinsic.Control.CaseAny("ISSUE")
+				F.Data.Dictionary.Exists("dictColIndex", V.Local.bDictExists)
+				F.Intrinsic.Control.If(V.Local.bDictExists,=,True)
+					F.Data.Dictionary.Close("dictColIndex")
+				F.Intrinsic.Control.EndIf
+						
+				F.Data.Dictionary.Create("dictColIndex")
+				F.Intrinsic.String.Split(V.DataTable.dtToolingOpen.FieldNames,"*!*",V.Local.sCol)
+				F.Intrinsic.Control.For(V.Local.iCnt,0,V.Local.sCol.UBound,1)
+					F.Data.Dictionary.AddItem("dictColIndex",V.Local.sCol(V.Local.iCnt),V.Local.iCnt)
+				F.Intrinsic.Control.Next(V.Local.iCnt)
+				F.Data.Dictionary.SetDefaultReturn("dictColIndex",0)
+				
+				'Validate whether the selected rows have correct EmployeeName and/or Workcenter
+				F.Intrinsic.Control.If(V.DataTable.dtToolingOpen(V.Local.iRow).EmployeeName!FieldValTrim,<>,"")
+					F.Intrinsic.String.Build("select EMPLOYEE from EMPLOYEE_MSTR where NAME = '{0}';",V.DataTable.dtToolingOpen(V.Local.iRow).EmployeeName!FieldValTrim,v.Local.sQuery)
+					F.ODBC.Connection!myCon.OpenRecordsetRO("rstEmployee",v.Local.sQuery)
+					F.Intrinsic.Control.If(v.ODBC.myCon!rstEmployee.EOF)
+						Gui.F_Tooling..ShowAlert("myAlert","Tooling Part Dashboard (6059)","Employee is invalid")
+						Gui.F_Tooling..UpdateAlertProperty("myAlert",v.Enum.AlertPropertyNames!SvgImage,v.Enum.Image!ERROR_COLOR)
+						F.ODBC.myCon!rstEmployee.Close
+						F.Intrinsic.Control.ExitSub
+					F.Intrinsic.Control.EndIf
+					F.ODBC.myCon!rstEmployee.Close
+				F.Intrinsic.Control.EndIf
+				
+				F.Intrinsic.Control.If(V.DataTable.dtToolingOpen(V.Local.iRow).Workcenter!FieldValTrim,<>,"")
+					F.Intrinsic.String.Build("select MACHINE from WORKCENTERS where MACHINE = '{0}';",V.DataTable.dtToolingOpen(V.Local.iRow).Workcenter!FieldValTrim,v.Local.sQuery)
+					F.ODBC.Connection!myCon.OpenRecordsetRO("rstWorkcenter",v.Local.sQuery)
+					F.Intrinsic.Control.If(v.ODBC.myCon!rstWorkcenter.EOF)
+						Gui.F_Tooling..ShowAlert("myAlert","Tooling Part Dashboard (6059)","Workcenter is invalid")
+						Gui.F_Tooling..UpdateAlertProperty("myAlert",v.Enum.AlertPropertyNames!SvgImage,v.Enum.Image!ERROR_COLOR)
+						F.ODBC.myCon!rstWorkcenter.Close
+						F.Intrinsic.Control.ExitSub
+					F.Intrinsic.Control.EndIf
+					F.ODBC.myCon!rstWorkcenter.Close
+				F.Intrinsic.Control.EndIf	
+				
+				F.Intrinsic.Math.Sub(V.DataTable.dtToolingOpen(V.Local.iRow).QTY_COMMITTED!FieldValFloat,V.DataTable.dtToolingOpen(V.Local.iRow).QTY_ISSUED!FieldValFloat,V.Local.fQtyRemainingToIssue)
+				
+				F.Intrinsic.Control.If(V.DataTable.dtToolingOpen(V.Local.iRow).MultiBin!FieldVal,=,True)
+					F.Intrinsic.Control.If(V.DataTable.dtToolingOpen(V.Local.iRow).QTY_TO_ISSUE!FieldValFloat,<=,0)
+						Gui.F_Tooling..ShowAlert("myAlert","Tooling Part Dashboard (6059)","Qty To Issue cannot be less than or equal to 0.0000")
+						Gui.F_Tooling..UpdateAlertProperty("myAlert",v.Enum.AlertPropertyNames!SvgImage,v.Enum.Image!ERROR_COLOR)
+						Gui.F_Tooling.gsgcToolingOpen.FocusCell("gvToolingOpen",V.Local.iRow,V.Dictionary.dictColIndex!QTY_TO_ISSUE)
+						F.Intrinsic.Control.ExitSub
+					F.Intrinsic.Control.ElseIf(V.DataTable.dtToolingOpen(V.Local.iRow).QTY_TO_ISSUE!FieldValFloat,>,V.DataTable.dtToolingOpen(V.Local.iRow).QTY_ONHAND!FieldValFloat)
+						Gui.F_Tooling..ShowAlert("myAlert","Tooling Part Dashboard (6059)","Qty To Issue cannot be greater than Qty OnHand")
+						Gui.F_Tooling..UpdateAlertProperty("myAlert",v.Enum.AlertPropertyNames!SvgImage,v.Enum.Image!ERROR_COLOR)
+						Gui.F_Tooling.gsgcToolingOpen.FocusCell("gvToolingOpen",V.Local.iRow,V.Dictionary.dictColIndex!QTY_TO_ISSUE)
+						F.Intrinsic.Control.ExitSub					
+					F.Intrinsic.Control.ElseIf(V.DataTable.dtToolingOpen(V.Local.iRow).QTY_TO_ISSUE!FieldValFloat,>,V.Local.fQtyRemainingToIssue)
+						Gui.F_Tooling..ShowAlert("myAlert","Tooling Part Dashboard (6059)","Qty Issued will exceed Qty Required")
+						Gui.F_Tooling..UpdateAlertProperty("myAlert",v.Enum.AlertPropertyNames!SvgImage,v.Enum.Image!ERROR_COLOR)
+						Gui.F_Tooling.gsgcToolingOpen.FocusCell("gvToolingOpen",V.Local.iRow,V.Dictionary.dictColIndex!QTY_TO_ISSUE)
+						F.Intrinsic.Control.ExitSub					
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.EndIf
+
+				F.Data.Dictionary.Exists("dictColIndex", V.Local.bDictExists)
+				F.Intrinsic.Control.If(V.Local.bDictExists,=,True)
+					F.Data.Dictionary.Close("dictColIndex")
+				F.Intrinsic.Control.EndIf
+						
+				F.Data.Dictionary.Create("dictColIndex")
+				F.Intrinsic.String.Split(V.DataTable.dtToolingOpen.FieldNames,"*!*",V.Local.sCol)
+				F.Intrinsic.Control.For(V.Local.iCnt,0,V.Local.sCol.UBound,1)
+					F.Data.Dictionary.AddItem("dictColIndex",V.Local.sCol(V.Local.iCnt),V.Local.iCnt)
+				F.Intrinsic.Control.Next(V.Local.iCnt)
+				F.Data.Dictionary.SetDefaultReturn("dictColIndex",0)
+					
+'				'Check for user access
+'				F.ODBC.Connection!myCon.OpenLocalRecordsetRO("rst","SELECT ID, SEQ FROM HOOK_ASSOCIATION WHERE SCRIPT_NAME LIKE 'GAB_4360_ISSUE%' AND ACTIVE_FLAG = 'A'")
+'	
+'				F.Intrinsic.Control.If(V.ODBC.myCon!rst.EOF,=,False)
+'					F.ODBC.myCon!rst.Close
+'					F.Intrinsic.UI.Msgbox("Cannot issue material directly. GAB_4360_ISSUE_MATERIAL_REQUEST is activated.")
+'					F.Intrinsic.Control.ExitSub
+'				F.Intrinsic.Control.Else
+'					F.ODBC.myCon!rst.Close
+'					F.Intrinsic.Control.CallSub(CheckPermissions,"JobStreamID",V.Global.iJobStreamID,"JobStreamSeqID",V.Global.iJobStreamSeqID)
+'					
+'					'User has access
+'					F.Intrinsic.Control.If(V.Args.AccessAllowed,=,False)
+'						F.Intrinsic.Control.ExitSub
+'					F.Intrinsic.Control.EndIf
+'				F.Intrinsic.Control.EndIf
+					
+				'Check for user access
+'				F.Intrinsic.Control.CallSub(CheckPermissions,"JobStreamID",V.Global.iJobStreamID,"JobStreamSeqID",V.Global.iJobStreamSeqID)
+				F.Intrinsic.Control.CallSub(CheckPermissions,"JobStreamID",V.Global.iJobStreamID,"JobStreamSeqID",0)
+				
+				'User doesn't have access
+				F.Intrinsic.Control.If(V.Args.AccessAllowed,=,False)
+					Gui.F_Tooling..ShowAlert("myAlert","Tooling Part Dashboard (6059)","You don't have access to SFC > Tran > Issue Material")
+					Gui.F_Tooling..UpdateAlertProperty("myAlert",v.Enum.AlertPropertyNames!SvgImage,v.Enum.Image!ERROR_COLOR)
+					F.Intrinsic.Control.ExitSub
+				F.Intrinsic.Control.EndIf
+				
+				'Lot/Bin Part and exists in multiple Bins
+				F.Intrinsic.Control.If(V.DataTable.dtToolingOpen(V.Local.iRow).MultiBin!FieldVal,=,True)
+					F.Intrinsic.UI.InvokeWaitDialog("Loading Lot/Bin Information.....", V.Global.sMessageTitle)
+					
+					F.Intrinsic.Control.CallSub(F_Tooling_LockScreen)
+					
+					V.Global.sJob.Set(V.DataTable.dtToolingOpen(V.Local.iRow).JOB!FieldValTrim)
+					V.Global.sSuffix.Set(V.DataTable.dtToolingOpen(V.Local.iRow).SUFFIX!FieldValTrim)
+					V.Global.sSeq.Set(V.DataTable.dtToolingOpen(V.Local.iRow).SEQ!FieldValTrim)
+					V.Global.sPart.Set(V.DataTable.dtToolingOpen(V.Local.iRow).PART!FieldValTrim)
+					V.Global.sLoc.Set(V.DataTable.dtToolingOpen(V.Local.iRow).LOC!FieldValTrim)
+					V.Global.sDescription.Set(V.DataTable.dtToolingOpen(V.Local.iRow).DESCRIPTION!FieldValTrim)
+					V.Global.fQtyOnhand.Set(V.DataTable.dtToolingOpen(V.Local.iRow).QTY_ONHAND!FieldValFloat)
+					V.Global.fQtyRemainingToIssue.Set(V.Local.fQtyRemainingToIssue)
+					V.Global.sEmployeeName.Set(V.DataTable.dtToolingOpen(V.Local.iRow).EmployeeName!FieldValTrim)
+					V.Global.sWorkcenter.Set(V.DataTable.dtToolingOpen(V.Local.iRow).Workcenter!FieldValTrim)
+					
+					Gui.F_IssueMatl.lblJob.Caption(V.Global.sJob)
+					Gui.F_IssueMatl.lblSuffix.Caption(V.Global.sSuffix)
+					Gui.F_IssueMatl.lblSeq.Caption(V.Global.sSeq)
+					Gui.F_IssueMatl.lblPart.Caption(V.Global.sPart)
+					Gui.F_IssueMatl.lblLoc.Caption(V.Global.sLoc)
+					Gui.F_IssueMatl.lblDescription.Caption(V.Global.sDescription)
+					F.Intrinsic.String.Format(V.Global.fQtyOnhand,"#,##0.0000",V.Local.sQtyOnhand)
+					Gui.F_IssueMatl.lblQtyOnhand.Caption(V.Local.sQtyOnhand)
+					F.Intrinsic.String.Format(V.Global.fQtyRemainingToIssue,"#,##0.0000",V.Local.sQtyRemainingToIssue)
+					Gui.F_IssueMatl.lblQtyRemainingToIssue.Caption(V.Local.sQtyRemainingToIssue)
+					
+					F.Intrinsic.Control.CallSub(LoadDtDvGvLotBin,"iRow",V.Local.iRow)
+					F.Intrinsic.Control.CallSub(FormatGvLotBin)
+					Gui.F_IssueMatl..Show
+					Gui.F_IssueMatl..SetFocus
+					
+					F.Intrinsic.UI.CloseWaitDialog
+				F.Intrinsic.Control.ElseIf(V.DataTable.dtToolingOpen(V.Local.iRow).QTY_TO_ISSUE!FieldValFloat,<=,0)
+					Gui.F_Tooling..ShowAlert("myAlert","Tooling Part Dashboard (6059)","Qty To Issue cannot be less than or equal to 0.0000")
+					Gui.F_Tooling..UpdateAlertProperty("myAlert",v.Enum.AlertPropertyNames!SvgImage,v.Enum.Image!ERROR_COLOR)
+					Gui.F_Tooling.gsgcToolingOpen.FocusCell("gvToolingOpen",V.Local.iRow,V.Dictionary.dictColIndex!QTY_TO_ISSUE)
+				F.Intrinsic.Control.ElseIf(V.DataTable.dtToolingOpen(V.Local.iRow).QTY_TO_ISSUE!FieldValFloat,>,V.DataTable.dtToolingOpen(V.Local.iRow).QTY_ONHAND!FieldValFloat)
+					Gui.F_Tooling..ShowAlert("myAlert","Tooling Part Dashboard (6059)","Qty To Issue cannot be greater than Qty OnHand")
+					Gui.F_Tooling..UpdateAlertProperty("myAlert",v.Enum.AlertPropertyNames!SvgImage,v.Enum.Image!ERROR_COLOR)
+					Gui.F_Tooling.gsgcToolingOpen.FocusCell("gvToolingOpen",V.Local.iRow,V.Dictionary.dictColIndex!QTY_TO_ISSUE)
+				F.Intrinsic.Control.ElseIf(V.DataTable.dtToolingOpen(V.Local.iRow).QTY_TO_ISSUE!FieldValFloat,>,V.Local.fQtyRemainingToIssue)
+					Gui.F_Tooling..ShowAlert("myAlert","Tooling Part Dashboard (6059)","Qty Issued will exceed Qty Required")
+					Gui.F_Tooling..UpdateAlertProperty("myAlert",v.Enum.AlertPropertyNames!SvgImage,v.Enum.Image!ERROR_COLOR)
+					Gui.F_Tooling.gsgcToolingOpen.FocusCell("gvToolingOpen",V.Local.iRow,V.Dictionary.dictColIndex!QTY_TO_ISSUE)
+				'Not MultiBin..... Could be Single Bin Part or Not Lot/Bin Part
+				F.Intrinsic.Control.Else      
+					'Part is Lot/Bin and only exists in 1 Lot/Bin
+					F.Intrinsic.Control.If(V.DataTable.dtToolingOpen(V.Local.iRow).LotBin!FieldVal,=,True)
+						'Get the Lot/Bin information
+						F.Intrinsic.Control.CallSub(GetLotBinPart,"sPart",V.DataTable.dtToolingOpen(V.Local.iRow).PART!FieldValTrim,"sLoc",V.DataTable.dtToolingOpen(V.Local.iRow).LOC!FieldValTrim)
+						
+						V.Local.sBin.Set(V.DataTable.dtLotBin(0).BIN!FieldValTrim)
+						V.Local.sHeat.Set(V.DataTable.dtLotBin(0).HEAT!FieldValTrim)
+						V.Local.sLot.Set(V.DataTable.dtLotBin(0).LOT!FieldValTrim)
+						V.Local.sSerial.Set(V.DataTable.dtLotBin(0).SERIAL!FieldValTrim)
+					'Part is NOT Lot/Bin
+					F.Intrinsic.Control.Else
+						V.Local.sBin.Set("")
+						V.Local.sHeat.Set("")
+						V.Local.sLot.Set("")
+						V.Local.sSerial.Set("")
+					F.Intrinsic.Control.EndIf
+											
+					V.Local.fQtyToIssue.Set(V.DataTable.dtToolingOpen(V.Local.iRow).QTY_TO_ISSUE!FieldValFloat)				
+					
+					F.Intrinsic.Control.CallSub(F_Tooling_LockScreen)
+					F.Intrinsic.Control.CallSub(CheckLockFile,"sJob",V.DataTable.dtToolingOpen(V.Local.iRow).JOB!FieldValTrim,"sSuffix",V.DataTable.dtToolingOpen(V.Local.iRow).SUFFIX!FieldValTrim)
+					F.Intrinsic.Control.If(V.Args.bIsLocked,<>,True)
+						F.Intrinsic.UI.InvokeWaitDialog("Issuing selected material.......","Tooling - Issue Material")
+						
+						F.Intrinsic.String.Format(V.Local.fQtyToIssue,"0.0000",V.Local.sQtyToIssue)
+						
+						F.Intrinsic.String.Format(V.Ambient.Now,"HhNnSs",V.Local.sTranTimeBegin)
+						F.Intrinsic.String.Concat(V.Local.sTranTimeBegin,"00",V.Local.sTranTimeBegin)
+		
+						F.Data.DataTable.AddRow("450100","Part",V.DataTable.dtToolingOpen(V.Local.iRow).PART!FieldValTrim,"Location",V.DataTable.dtToolingOpen(V.Local.iRow).LOC!FieldValTrim,"Quantity",V.Local.sQtyToIssue,"Lot",V.Local.sLot.Trim,"Bin",V.Local.sBin.Trim,"Heat",V.Local.sHeat.Trim,"Serial",V.Local.sSerial.Trim,"WONumber",V.DataTable.dtToolingOpen(V.Local.iRow).JOB!FieldValTrim,"WOSuffix",V.DataTable.dtToolingOpen(V.Local.iRow).SUFFIX!FieldValTrim,"WOSeq",V.DataTable.dtToolingOpen(V.Local.iRow).SEQ!FieldValTrim)
+						F.Intrinsic.Control.CallSub(450100Sync)
+						
+						F.Intrinsic.String.Format(V.Ambient.Now,"HhNnSs",V.Local.sTranTimeEnd)
+						F.Intrinsic.String.Concat(V.Local.sTranTimeEnd,"99",V.Local.sTranTimeEnd)
+						
+						'Check whether Issue Material transaction is successful
+						F.Intrinsic.Control.CallSub(CheckIssueMaterialTran,"sJob",V.DataTable.dtToolingOpen(V.Local.iRow).JOB!FieldValTrim,"sSuffix",V.DataTable.dtToolingOpen(V.Local.iRow).SUFFIX!FieldValTrim,"sSeq",V.DataTable.dtToolingOpen(V.Local.iRow).SEQ!FieldValTrim,"sPart",V.DataTable.dtToolingOpen(V.Local.iRow).PART!FieldValTrim,"sDescription",V.DataTable.dtToolingOpen(V.Local.iRow).DESCRIPTION!FieldValTrim,"fQtyIssued",V.Local.fQtyToIssue,"sLot",V.Local.sLot,"sBin",V.Local.sBin,"sHeat",V.Local.SHeat,"sSerial",V.Local.sSerial,"sEmployeeName",V.DataTable.dtToolingOpen(V.Local.iRow).EmployeeName!FieldValTrim,"sWorkcenter",V.DataTable.dtToolingOpen(V.Local.iRow).Workcenter!FieldValTrim,"sTranTimeBegin",V.Local.sTranTimeBegin,"sTranTimeEnd",V.Local.sTranTimeEnd)
+						F.Intrinsic.UI.CloseWaitDialog
+						
+						F.Intrinsic.Control.If(V.Args.bIsSuccessful,=,True)
+							F.Intrinsic.Math.Add(1,V.Global.iIssuedCnt,V.Global.iIssuedCnt)
+'							F.Intrinsic.Control.CallSub(RefreshScreen)
+							F.Intrinsic.Control.If(V.Local.fQtyToIssue,>=,V.Local.fQtyRemainingToIssue)
+								F.Data.DataTable.DeleteRow("dtToolingOpen",v.Local.iRow)
+								F.Data.DataTable.AcceptChanges("dtToolingOpen")
+							F.Intrinsic.Control.EndIf
+						F.Intrinsic.Control.EndIf						
+					F.Intrinsic.Control.EndIf
+					F.Intrinsic.Control.CallSub(F_Tooling_UnLockScreen)
+					Gui.F_Tooling..SetFocus
+				F.Intrinsic.Control.EndIf
+				
+				F.Data.Dictionary.Exists("dictColIndex", V.Local.bDictExists)
+				F.Intrinsic.Control.If(V.Local.bDictExists,=,True)
+					F.Data.Dictionary.Close("dictColIndex")
+				F.Intrinsic.Control.EndIf
+			
+			F.Intrinsic.Control.CaseAny("EMPLOYEENAMELU","EmployeeNameLU")
+				Gui.F_Tooling.lkupEmployeeName.Show
+				
+			F.Intrinsic.Control.CaseAny("WORKCENTERLU","WorkcenterLU")
+				F.Intrinsic.Control.If(v.DataTable.dtWorkcenterLU.Exists,=,False)
+					F.Data.DataTable.CreateFromSQL("dtWorkcenterLU","myCon","select MACHINE as Workcenter, WC_NAME as Description from WORKCENTERS order by MACHINE;",True)
+					Gui.F_Tooling.lkupWorkcenter.DataTableBasis("dtWorkcenterLU")
+					Gui.F_Tooling.lkupWorkcenter.Initialize
+				F.Intrinsic.Control.EndIf
+				Gui.F_Tooling.lkupWorkcenter.Show
+				
+			F.Intrinsic.Control.CaseAny("QTY_ONHAND","qty_onhand")				
+				F.Intrinsic.Control.If(V.DataTable.dtToolingOpen(V.Local.iRow).LotBin!FieldVal,=,True)
+					F.Intrinsic.UI.InvokeWaitDialog("Loading Item Master Information.....", V.Global.sMessageTitle)
+					
+					F.Intrinsic.Control.CallSub(F_Tooling_LockScreen)
+					
+					V.Global.sPart.Set(V.DataTable.dtToolingOpen(V.Local.iRow).PART!FieldValTrim)
+					V.Global.sLoc.Set(V.DataTable.dtToolingOpen(V.Local.iRow).LOC!FieldValTrim)
+					V.Global.sDescription.Set(V.DataTable.dtToolingOpen(V.Local.iRow).DESCRIPTION!FieldValTrim)
+					V.Global.fQtyOnhand.Set(V.DataTable.dtToolingOpen(V.Local.iRow).QTY_ONHAND!FieldValFloat)
+					
+					Gui.F_ItemMaster.lblPart.Caption(V.Global.sPart)
+					Gui.F_ItemMaster.lblLoc.Caption(V.Global.sLoc)
+					Gui.F_ItemMaster.lblDescription.Caption(V.Global.sDescription)
+					F.Intrinsic.String.Format(V.Global.fQtyOnhand,"#,##0.0000",V.Local.sQtyOnhand)
+					Gui.F_ItemMaster.lblQtyOnhand.Caption(V.Local.sQtyOnhand)
+					
+					F.Intrinsic.Control.CallSub(LoadDtDvGvItemMaster,"iRow",V.Local.iRow)
+					F.Intrinsic.Control.CallSub(FormatGvItemMaster)
+					Gui.F_ItemMaster..Show
+					Gui.F_ItemMaster..SetFocus
+					
+					F.Intrinsic.UI.CloseWaitDialog
+				F.Intrinsic.Control.EndIf
+				
+		F.Intrinsic.Control.EndSelect
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.gsgcToolingOpen_RowCellClick.End
+
+Program.Sub.CheckLockFile.Start
+	V.Local.sQuery.Declare
+	V.Local.bIsLocked.Declare
+	
+	F.Intrinsic.Control.Try
+	
+		F.Intrinsic.String.Build("SELECT USER_ID FROM X_LOCK_FILE WHERE COMPANY = '{0}' and LOCK_TYPE = 'WO' and REC_KEY = '{1}-{2}'",V.Caller.CompanyCode,V.Args.sJob,V.Args.sSuffix,V.Local.sQuery)
+		F.ODBC.Connection!myCon.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+		F.Intrinsic.Control.If(V.ODBC.myCon!rst.EOF,=,False)
+			V.Local.bIsLocked.Set(True)
+			F.Intrinsic.String.Build("Issue material cannot be processed. WO {0}-{1} is currently being opened by user {2}",V.Args.sJob,V.Args.sSuffix,V.ODBC.myCon!rst.FieldVal!USER_ID,V.Local.sQuery)
+			Gui.F_Tooling..ShowAlert("myAlert","Tooling Part Dashboard (6059)",V.Local.sQuery)
+			Gui.F_Tooling..UpdateAlertProperty("myAlert",v.Enum.AlertPropertyNames!SvgImage,v.Enum.Image!ERROR_COLOR)
+		F.Intrinsic.Control.Else
+			V.Local.bIsLocked.Set(False)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.myCon!rst.Close
+		F.Intrinsic.Variable.AddRV("bIsLocked",V.Local.bIsLocked)
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.CheckLockFile.End
+
+Program.Sub.F_Tooling_LockScreen.Start
+	F.Intrinsic.Control.Try
+	
+		Gui.F_Tooling..Enabled(False)
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.F_Tooling_LockScreen.End
+
+Program.Sub.F_Tooling_UnlockScreen.Start
+	F.Intrinsic.Control.Try
+	
+		Gui.F_Tooling..Enabled(True)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.F_Tooling_UnlockScreen.End
+
+Program.Sub.F_IssueMatl_LockScreen.Start
+	F.Intrinsic.Control.Try
+	Gui.F_IssueMatl..Enabled(False)
+Program.Sub.F_IssueMatl_LockScreen.End
+
+Program.Sub.F_IssueMatl_UnlockScreen.Start
+	F.Intrinsic.Control.Try
+	
+		Gui.F_IssueMatl..Enabled(True)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.F_IssueMatl_UnlockScreen.End
+
+Program.Sub.F_IssueMatl_UnLoad.Start
+	F.Intrinsic.Control.Try
+	
+		Gui.F_IssueMatl..Visible(False)
+		F.Intrinsic.Control.CallSub(F_Tooling_UnlockScreen)
+		Gui.F_Tooling..SetFocus
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.F_IssueMatl_UnLoad.End
+
+Program.Sub.F_ItemMaster_UnLoad.Start
+	F.Intrinsic.Control.Try
+	
+		Gui.F_ItemMaster..Visible(False)
+		F.Intrinsic.Control.CallSub(F_Tooling_UnlockScreen)
+		Gui.F_Tooling..SetFocus
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.F_ItemMaster_UnLoad.End
+
+Program.Sub.CheckPermissions.Start
+	V.Local.bAccessAllowed.Declare()
+	
+	F.Intrinsic.Control.Try
+	
+		' If user has access to Issue Material
+		F.Global.Security.CheckUserAccessIPM(V.Args.JobStreamID, V.Args.JobStreamSeqID, V.Local.bAccessAllowed)
+		F.Intrinsic.Variable.AddRV("AccessAllowed",V.Local.bAccessAllowed)
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.CheckPermissions.End
+
+Program.Sub.GetLotBinPart.Start
+	V.Local.sQuery.Declare()
+	
+	F.Intrinsic.Control.Try
+
+		F.Intrinsic.Control.If(V.DataTable.dtLotBin.Exists,=,True)
+			F.Data.DataTable.Close("dtLotBin")
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.String.Build("SELECT LOT AS Lot, BIN AS Bin, HEAT AS Heat, SERIAL_NUMBER as Serial, DATE_EXPIRATION AS ExpDate, QUANTITY as QTY_ONHAND, CONVERT(0.00, SQL_FLOAT) AS QTY_TO_ISSUE FROM V_ITEM_MASTER WHERE PART = '{0}' and LOCATION = '{1}' AND QUANTITY > 0 ORDER BY DATE_LAST_REC",V.Args.sPart,V.Args.sLoc,V.Local.sQuery)
+		F.Data.DataTable.CreateFromSQL("dtLotBin","myCon",V.Local.sQuery,True)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+	
+Program.Sub.GetLotBinPart.End
+
+Program.Sub.ContextMenuExport.Start
+	V.Local.sFileExport.Declare
+	V.Local.bExcel.Declare
+	V.Local.sMsg.Declare
+	
+	F.Intrinsic.Control.Try
+
+		F.Automation.MSExcel.CheckPresence(V.Local.bExcel)
+		F.Intrinsic.String.Format(V.Ambient.Date,"YYYYMMDD",V.Local.sMsg)
+		F.Intrinsic.Control.SelectCase(V.Screen.F_Tooling!tabTooling.Tab)
+			F.Intrinsic.Control.Case(0)
+				F.Intrinsic.Control.If(V.Local.bExcel,=,True)
+					F.Intrinsic.UI.ShowSaveFileDialog("","*.xlsx|",V.Local.sFileExport)
+				F.Intrinsic.Control.Else
+					F.Intrinsic.UI.ShowSaveFileDialog("","*.csv|",V.Local.sFileExport)
+				F.Intrinsic.Control.EndIf
+		
+				F.Intrinsic.Control.If(V.Local.sFileExport,<>,"***CANCEL***")
+					F.Intrinsic.Control.If(V.Local.bExcel,=,True)
+						F.Intrinsic.String.Concat(V.Local.sFileExport,".xlsx",V.Local.sFileExport)
+						Gui.F_Tooling.gsgcToolingOpen.Export(V.Local.sFileExport,"xlsx")
+					F.Intrinsic.Control.Else
+						F.Intrinsic.String.Concat(V.Local.sFileExport,".csv",V.Local.sFileExport)
+						Gui.F_Tooling.gsgcToolingOpen.Export(V.Local.sFileExport,"csv")
+					F.Intrinsic.Control.EndIf
+					F.Intrinsic.String.Concat("Grid exported to ",V.Local.sFileExport,V.Local.sMsg)
+					F.Intrinsic.UI.Msgbox(V.Local.sMsg)
+					F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.Case(1)
+				F.Intrinsic.Control.If(V.Local.bExcel,=,True)
+					F.Intrinsic.UI.ShowSaveFileDialog("","*.xlsx|",V.Local.sFileExport)
+				F.Intrinsic.Control.Else
+					F.Intrinsic.UI.ShowSaveFileDialog("","*.csv|",V.Local.sFileExport)
+				F.Intrinsic.Control.EndIf
+		
+				F.Intrinsic.Control.If(V.Local.sFileExport,<>,"***CANCEL***")
+					F.Intrinsic.Control.If(V.Local.bExcel,=,True)
+						F.Intrinsic.String.Concat(V.Local.sFileExport,".xlsx",V.Local.sFileExport)
+						Gui.F_Tooling.gsgcToolingHistory.Export(V.Local.sFileExport,"xlsx")
+					F.Intrinsic.Control.Else
+						F.Intrinsic.String.Concat(V.Local.sFileExport,".csv",V.Local.sFileExport)
+						Gui.F_Tooling.gsgcToolingHistory.Export(V.Local.sFileExport,"csv")
+					F.Intrinsic.Control.EndIf
+					F.Intrinsic.String.Concat("Grid exported to ",V.Local.sFileExport,V.Local.sMsg)
+					F.Intrinsic.UI.Msgbox(V.Local.sMsg)
+					F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+				F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndSelect			
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.ContextMenuExport.End
+
+Program.Sub.CheckIssueMaterialTran.Start
+	V.Local.sQuery.Declare
+	V.Local.bIsSuccessful.Declare
+	V.Local.sJob.Declare
+	V.Local.sSuffix.Declare
+	V.Local.sSeq.Declare
+	V.Local.sUser.Declare
+	V.Local.sPart.Declare
+	V.Local.sDescription.Declare
+	V.Local.sLot.Declare
+	V.Local.sBin.Declare
+	V.Local.sHeat.Declare
+	V.Local.sSerial.Declare
+	V.Local.sIssueDate.Declare
+	V.Local.dIssueDate.Declare
+	V.Local.fQtyIssued.Declare
+	V.Local.sMessage.Declare
+	V.Local.sDate.Declare
+	V.Local.sBISeq.Declare
+	V.Local.sTranTimeBegin.Declare
+	V.Local.sTranTimeEnd.Declare
+	V.Local.sDATE_HISTORY.Declare
+	V.Local.sINV_HIST_TIME.Declare
+	V.Local.sWorkcenter.Declare
+	V.Local.sEmployeeName.Declare
+	
+	F.Intrinsic.Control.Try
+		
+		V.Local.sJob.Set(V.Args.sJob.Trim)
+		V.Local.sSuffix.Set(V.Args.sSuffix.Trim)
+		V.Local.sSeq.Set(V.Args.sSeq.Trim)
+		V.Local.sPart.Set(V.Args.sPart.Trim)
+		V.Local.sDescription.Set(V.Args.sDescription.Trim)
+		F.Intrinsic.Math.Mult(-1,V.Args.fQtyIssued,V.Local.fQtyIssued)
+		V.Local.sUser.Set(V.Caller.User)
+		V.Local.dIssueDate.Set(V.Ambient.Date)
+		F.Intrinsic.String.Format(V.Local.dIssueDate,"YYMMDD",V.Local.sIssueDate)
+		V.Local.sLot.Set(V.Args.sLot.Trim)
+		V.Local.sBin.Set(V.Args.sBin.Trim)
+		V.Local.sHeat.Set(V.Args.sHeat.Trim)
+		V.Local.sSerial.Set(V.Args.sSerial.Trim)
+		V.Local.sWorkcenter.Set(V.Args.sWorkcenter.Trim)
+		V.Local.sEmployeeName.Set(V.Args.sEmployeeName.Trim)
+		V.Local.sTranTimeBegin.Set(V.Args.sTranTimeBegin.Trim)
+		V.Local.sTranTimeEnd.Set(V.Args.sTranTimeEnd.Trim)
+		
+		F.Intrinsic.String.Build("SELECT PART, DATE_HISTORY, INV_HIST_TIME from INVENTORY_HIST WHERE DATE_HISTORY = '{0}' AND PART = '{1}' AND JOB = '{2}' AND SUFFIX = '{3}' AND SEQ = '{4}' AND QUANTITY = {5} AND USERID = '{6}' AND INV_HIST_TIME >= '{7}' and INV_HIST_TIME <= '{8}' AND CODE_TRANSACTION = 'J55'",V.Local.sIssueDate,V.Local.sPart,V.Local.sJob,V.Local.sSuffix,V.Local.sSeq,V.Local.fQtyIssued,V.Local.sUser,V.Local.sTranTimeBegin,V.Local.sTranTimeEnd,V.Local.sQuery)
+		F.ODBC.Connection!myCon.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+		F.Intrinsic.Control.If(V.ODBC.myCon!rst.EOF,=,True)        'Transaction Failed
+			F.ODBC.myCon!rst.Close
+			V.Local.bIsSuccessful.Set(False)
+		F.Intrinsic.Control.Else	'Transaction Succeeded
+			V.Local.sDATE_HISTORY.Set(V.ODBC.myCon!rst.FieldValTrim!DATE_HISTORY)
+			V.Local.sINV_HIST_TIME.Set(V.ODBC.myCon!rst.FieldValTrim!INV_HIST_TIME)
+			F.ODBC.myCon!rst.Close
+			
+			'Check JOB_TRANS_ERR 
+			F.Intrinsic.String.Build("SELECT DESCRIPTION, MSG_ID, FILENAME FROM V_JOB_TRANS_ERR WHERE JOB = '{0}' AND SUFFIX = '{1}' AND SEQ = '{2}' AND PART = '{3}' AND TRAN_DATE = '{4}' AND PROGRAM = 'JB0320'",V.Local.sJob.,V.Local.sSuffix,V.Local.sSeq,V.Local.sPart,V.Local.dIssueDate.PervasiveDate,V.Local.sQuery)
+			F.ODBC.Connection!myCon.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+			F.Intrinsic.Control.If(V.ODBC.myCon!rst.EOF,=,False)       'Transaction Failed
+				F.ODBC.myCon!rst.Close
+				V.Local.bIsSuccessful.Set(False)
+				F.Intrinsic.String.Build("There was an error in issue material with the following description: {1}{0}Message ID: {2}, Filename: {3}{0}For Job: {4}-{5}, Sequence: {6}, Part: {7}",V.Ambient.NewLine,V.ODBC.myCon!rst.FieldVal!DESCRIPTION,V.ODBC.myCon!rst.FieldVal!MSG_ID,V.ODBC.myCon!rst.FieldVal!FILENAME,V.Local.sJob,V.Local.sSuffix,V.Local.sSeq,V.Local.sPart,V.Local.sMessage)
+				Gui.F_Tooling..ShowAlert("myAlert","Tooling Part Dashboard (6059)",V.Local.sMessage)
+				Gui.F_Tooling..UpdateAlertProperty("myAlert",v.Enum.AlertPropertyNames!SvgImage,v.Enum.Image!ERROR_COLOR)
+			F.Intrinsic.Control.Else	'Transaction Succeeded
+				F.ODBC.myCon!rst.Close
+				V.Local.bIsSuccessful.Set(True)
+				F.Intrinsic.String.Format(V.Ambient.Now,"YYYY-MM-DD HH:NN:SS",V.Local.sIssueDate)
+				
+				'Add record to BI_SF_AUDIT for audit trail printout
+				F.Intrinsic.Math.Add(V.Global.iBISeq,1,V.Global.iBISeq)
+				F.Intrinsic.String.LPad(V.Global.iBISeq,"0",9,V.Local.sBISeq)
+				F.Intrinsic.String.DateString(V.Ambient.Date,V.Local.sDate)
+				F.Intrinsic.String.Left(V.Local.sDescription,30,V.Local.sDescription)
+				F.Intrinsic.String.Build("INSERT INTO BI_SF_AUDIT(TRMNL, RPTID, SEQUENCE, REC_TYPE, TRANS, JOB, SUFFIX, CATEGORY, DESCR, REFERENCE, TRAN_DATE, QTY_1, HEADING, LOT, BIN, HEAT, SERIAL) VALUES('{0}','{1}','{2}','L','02','{3}','{4}','{5}','{6}','{7}','{8}',{9},'Audit Trail for Issue of Materials to Work Orders','{10}','{11}','{12}','{13}')",V.Caller.Terminal,V.Global.sRptID,V.Local.sBISeq,V.Local.sJob,V.Local.sSuffix,V.Local.sSeq,V.Local.sDescription.PSQLFriendly,V.Local.sPart.PSQLFriendly,V.Local.sDate.Trim,V.Local.fQtyIssued,V.Local.sLot,V.Local.sBin,V.Local.sHeat,V.Local.sSerial,V.Local.sQuery)
+				F.ODBC.Connection!MyCon.Execute(V.Local.sQuery)	
+				
+				'Add record to GAB_6059_TOOL_HIST table
+				F.Intrinsic.String.Build("INSERT INTO GAB_6059_TOOL_HIST(JOB, SUFFIX, SEQ, DATE_HISTORY, INV_HIST_TIME, EMP_NAME, WORKCENTER) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}');",V.Local.sJob,V.Local.sSuffix,V.Local.sSeq,V.Local.sDATE_HISTORY,V.Local.sINV_HIST_TIME,V.Local.sEmployeeName,V.Local.sWorkcenter,V.Local.sQuery)
+				F.ODBC.Connection!MyCon.Execute(V.Local.sQuery)	
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.Variable.AddRV("bIsSuccessful",V.Local.bIsSuccessful)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.CheckIssueMaterialTran.End
+
+Program.Sub.F_IssueMatl_cmdOK_Click.Start
+	V.Local.fQtyToIssue.Declare
+	V.Local.sQtyToIssue.Declare
+	V.Local.iRow.Declare
+	V.Local.bDictExists.Declare
+	V.Local.iCnt.Declare
+	V.Local.sCol.Declare
+	V.Local.fTotQtyToIssue.Declare
+	V.Local.sBin.Declare
+	V.Local.sHeat.Declare
+	V.Local.sLot.Declare
+	V.Local.sSerial.Declare
+	V.Local.sTranTimeBegin.Declare
+	V.Local.sTranTimeEnd.Declare
+	
+	F.Intrinsic.Control.Try
+		
+		F.Data.Dictionary.Exists("dictColIndex", V.Local.bDictExists)
+		F.Intrinsic.Control.If(V.Local.bDictExists,=,True)
+			F.Data.Dictionary.Close("dictColIndex")
+		F.Intrinsic.Control.EndIf
+				
+		F.Data.Dictionary.Create("dictColIndex")
+		F.Intrinsic.String.Split(V.DataTable.dtLotBin.FieldNames,"*!*",V.Local.sCol)
+		F.Intrinsic.Control.For(V.Local.iCnt,0,V.Local.sCol.UBound,1)
+			F.Data.Dictionary.AddItem("dictColIndex",V.Local.sCol(V.Local.iCnt),V.Local.iCnt)
+		F.Intrinsic.Control.Next(V.Local.iCnt)
+		F.Data.Dictionary.SetDefaultReturn("dictColIndex",0)
+		
+		V.Local.fTotQtyToIssue.Set(0.0000)
+		'Perform validation of Qty To Issue
+		F.Intrinsic.Control.For(V.Local.iRow,0,V.DataTable.dtLotBin.RowCount--,1)
+			F.Intrinsic.Control.If(V.DataTable.dtLotBin(V.Local.iRow).QTY_TO_ISSUE!FieldValFloat,>,V.DataTable.dtLotBin(V.Local.iRow).QTY_ONHAND!FieldValFloat)
+				Gui.F_Tooling..ShowAlert("myAlert","Tooling Part Dashboard (6059)","Qty To Issue cannot be greater than Qty OnHand of the Lot/Bin")
+				Gui.F_Tooling..UpdateAlertProperty("myAlert",v.Enum.AlertPropertyNames!SvgImage,v.Enum.Image!ERROR_COLOR)
+				Gui.F_IssueMatl.gsgcLotBin.FocusCell("gvLotBin",V.Local.iRow,V.Dictionary.dictColIndex!QTY_TO_ISSUE)
+				F.Intrinsic.Control.ExitSub				'Stop execution and exit the Subroutine
+			F.Intrinsic.Control.EndIf
+			
+			'Accummulate the Qty to Issue
+			F.Intrinsic.Math.Add(V.DataTable.dtLotBin(V.Local.iRow).QTY_TO_ISSUE!FieldValFloat,V.Local.fTotQtyToIssue,V.Local.fTotQtyToIssue)
+			
+			F.Intrinsic.Control.If(V.Local.fTotQtyToIssue,>,V.Global.fQtyRemainingToIssue)
+				Gui.F_Tooling..ShowAlert("myAlert","Tooling Part Dashboard (6059)","Qty Issued will exceed Qty Required")
+				Gui.F_Tooling..UpdateAlertProperty("myAlert",v.Enum.AlertPropertyNames!SvgImage,v.Enum.Image!ERROR_COLOR)
+				Gui.F_IssueMatl.gsgcLotBin.FocusCell("gvLotBin",V.Local.iRow,V.Dictionary.dictColIndex!QTY_TO_ISSUE)
+				F.Intrinsic.Control.ExitSub				'Stop execution and exit the Subroutine
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Next(V.Local.iRow)
+		
+		'Once the validation of Qty To Issue is OK, perform the Issue Material Transaction
+		F.Intrinsic.UI.InvokeWaitDialog("Issuing selected material.......","Tooling - Issue Material")
+		F.Intrinsic.Control.CallSub(F_IssueMatl_LockScreen)
+		F.Intrinsic.Control.For(V.Local.iRow,0,V.DataTable.dtLotBin.RowCount--,1)
+			V.Local.fQtyToIssue.Set(V.DataTable.dtLotBin(V.Local.iRow).QTY_TO_ISSUE!FieldValFloat)	
+			F.Intrinsic.Control.If(V.Local.fQtyToIssue,>,0)
+				V.Local.sBin.Set(V.DataTable.dtLotBin(V.Local.iRow).BIN!FieldValTrim)
+				V.Local.sHeat.Set(V.DataTable.dtLotBin(V.Local.iRow).HEAT!FieldValTrim)
+				V.Local.sLot.Set(V.DataTable.dtLotBin(V.Local.iRow).LOT!FieldValTrim)
+				V.Local.sSerial.Set(V.DataTable.dtLotBin(V.Local.iRow).SERIAL!FieldValTrim)
+				
+				F.Intrinsic.Control.CallSub(CheckLockFile,"sJob",V.Global.sJob,"sSuffix",V.Global.sSuffix)
+				F.Intrinsic.Control.If(V.Args.bIsLocked,<>,True)
+					F.Intrinsic.String.Format(V.Local.fQtyToIssue,"0.0000",V.Local.sQtyToIssue)
+					
+					F.Intrinsic.String.Format(V.Ambient.Now,"HhNnSs",V.Local.sTranTimeBegin)
+					F.Intrinsic.String.Concat(V.Local.sTranTimeBegin,"00",V.Local.sTranTimeBegin)
+						
+					'Call Issue Material CallWrapper
+					F.Data.DataTable.AddRow("450100","Part",V.Global.sPart,"Location",V.Global.sLoc,"Quantity",V.Local.sQtyToIssue,"Lot",V.Local.sLot,"Bin",V.Local.sBin,"Heat",V.Local.sHeat,"Serial",V.Local.sSerial,"WONumber",V.Global.sJob,"WOSuffix",V.Global.sSuffix,"WOSeq",V.Global.sSeq)
+					F.Intrinsic.Control.CallSub(450100Sync)
+					
+					F.Intrinsic.String.Format(V.Ambient.Now,"HhNnSs",V.Local.sTranTimeEnd)
+					F.Intrinsic.String.Concat(V.Local.sTranTimeEnd,"99",V.Local.sTranTimeEnd)
+						
+					'Check whether Issue Material transaction is successful
+					F.Intrinsic.Control.CallSub(CheckIssueMaterialTran,"sJob",V.Global.sJob,"sSuffix",V.Global.sSuffix,"sSeq",V.Global.sSeq,"sPart",V.Global.sPart,"sDescription",V.Global.sDescription,"fQtyIssued",V.Local.fQtyToIssue,"sLot",V.Local.sLot,"sBin",V.Local.sBin,"sHeat",V.Local.SHeat,"sSerial",V.Local.sSerial,"sEmployeeName",V.Global.sEmployeeName,"sWorkcenter",V.Global.sWorkcenter,"sTranTimeBegin",V.Local.sTranTimeBegin,"sTranTimeEnd",V.Local.sTranTimeEnd)
+					F.Intrinsic.Control.If(V.Args.bIsSuccessful,=,True)
+						F.Intrinsic.Math.Add(1,V.Global.iIssuedCnt,V.Global.iIssuedCnt)
+					F.Intrinsic.Control.EndIf						
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Next(V.Local.iRow)
+		
+		F.Intrinsic.Control.CallSub(F_IssueMatl_UnlockScreen)
+		F.Intrinsic.Control.CallSub(F_IssueMatl_UnLoad)
+'		F.Intrinsic.Control.CallSub(RefreshScreen)
+		F.Intrinsic.Control.If(V.Args.bIsSuccessful,=,True)
+			F.Intrinsic.Control.If(V.Local.fTotQtyToIssue,>=,V.Global.fQtyRemainingToIssue)
+				F.Data.DataTable.DeleteRow("dtToolingOpen",V.Global.iSelectedRow)
+				F.Data.DataTable.AcceptChanges("dtToolingOpen")
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.UI.CloseWaitDialog
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.F_IssueMatl_cmdOK_Click.End
+
+Program.Sub.F_IssueMatl_cmdCancel_Click.Start
+	F.Intrinsic.Control.Try
+		
+		F.Intrinsic.Control.CallSub(F_IssueMatl_UnLoad)
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.F_IssueMatl_cmdCancel_Click.End
+
+Program.Sub.LoadDtDvGvLotBin.Start
+	V.Local.sQuery.Declare()
+	V.Local.sPart.Declare
+	V.Local.sLoc.Declare
+
+	F.Intrinsic.Control.Try
+	
+		V.Local.sPart.Set(V.DataTable.dtToolingOpen(V.Args.iRow).PART!FieldValTrim)
+		V.Local.sLoc.Set(V.DataTable.dtToolingOpen(V.Args.iRow).LOC!FieldValTrim)
+		
+		F.Intrinsic.Control.If(V.DataTable.dtLotBin.Exists,=,True)
+			F.Data.DataTable.Close("dtLotBin")
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.String.Build("SELECT LOT AS Lot, BIN AS Bin, HEAT AS Heat, SERIAL_NUMBER as Serial, DATE_EXPIRATION AS ExpDate, QUANTITY as QTY_ONHAND, CONVERT(0.00, SQL_FLOAT) AS QTY_TO_ISSUE FROM V_ITEM_MASTER WHERE PART = '{0}' and LOCATION = '{1}' AND QUANTITY > 0 ORDER BY DATE_LAST_REC",V.Local.sPart,V.Local.sLoc,V.Local.sQuery)
+		F.Data.DataTable.CreateFromSQL("dtLotBin","myCon",V.Local.sQuery,True)
+	
+		F.Intrinsic.Control.If(V.DataView.dtLotBin!dvLotBin.Exists,=,True)
+			F.Data.DataView.Close("dtLotBin","dvLotBin")
+		F.Intrinsic.Control.EndIf
+
+		F.Data.DataView.Create("dtLotBin", "dvLotBin")
+		Gui.F_IssueMatl.gsgcLotBin.AddGridviewFromDataview("gvLotBin","dtLotBin","dvLotBin")
+		Gui.F_IssueMatl.gsgcLotBin.MainView("gvLotBin")
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadDtDvGvLotBin.End
+
+Program.Sub.LoadDtDvGvItemMaster.Start
+	V.Local.sQuery.Declare()
+	V.Local.sPart.Declare
+	V.Local.sLoc.Declare
+
+	F.Intrinsic.Control.Try
+	
+		V.Local.sPart.Set(V.DataTable.dtToolingOpen(V.Args.iRow).PART!FieldValTrim)
+		V.Local.sLoc.Set(V.DataTable.dtToolingOpen(V.Args.iRow).LOC!FieldValTrim)
+		
+		F.Intrinsic.Control.If(V.DataTable.dtItemMaster.Exists,=,True)
+			F.Data.DataTable.Close("dtItemMaster")
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.String.Build("SELECT LOT AS Lot, BIN AS Bin, HEAT AS Heat, SERIAL_NUMBER as Serial, DATE_EXPIRATION AS ExpDate, QUANTITY as QTY_ONHAND FROM V_ITEM_MASTER WHERE PART = '{0}' and LOCATION = '{1}' AND QUANTITY > 0 ORDER BY DATE_LAST_REC",V.Local.sPart,V.Local.sLoc,V.Local.sQuery)
+		F.Data.DataTable.CreateFromSQL("dtItemMaster","myCon",V.Local.sQuery,True)
+	
+		F.Intrinsic.Control.If(V.DataView.dtItemMaster!dvLotBin.Exists,=,True)
+			F.Data.DataView.Close("dtItemMaster","dvLotBin")
+		F.Intrinsic.Control.EndIf
+
+		F.Data.DataView.Create("dtItemMaster", "dvItemMaster")
+		Gui.F_ItemMaster.gsgcItemMaster.AddGridviewFromDataview("gvItemMaster","dtItemMaster","dvItemMaster")
+		Gui.F_ItemMaster.gsgcItemMaster.MainView("gvItemMaster")
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadDtDvGvItemMaster.End
+
+Program.Sub.gsgcToolingOpen_CellValueChanged.Start
+	V.Local.sQuery.Declare
+		
+	F.Intrinsic.Control.Try
+		F.Intrinsic.Control.SelectCase(V.Args.Column)	
+			F.Intrinsic.Control.CaseAny("EMPLOYEENAME","EmployeeName")		
+				F.Intrinsic.Control.If(v.Args.Value.Trim,<>,"")
+					F.Intrinsic.String.Build("select EMPLOYEE from EMPLOYEE_MSTR where NAME = '{0}';",v.Args.Value.Trim,v.Local.sQuery)
+					F.ODBC.Connection!myCon.OpenRecordsetRO("rstEmployee",v.Local.sQuery)
+					F.Intrinsic.Control.If(v.ODBC.myCon!rstEmployee.EOF)
+						Gui.F_Tooling..ShowAlert("myAlert","Tooling Part Dashboard (6059)","Employee is invalid")
+						Gui.F_Tooling..UpdateAlertProperty("myAlert",v.Enum.AlertPropertyNames!SvgImage,v.Enum.Image!ERROR_COLOR)
+					F.Intrinsic.Control.EndIf
+					F.ODBC.myCon!rstEmployee.Close
+				F.Intrinsic.Control.EndIf
+			
+			F.Intrinsic.Control.CaseAny("WORKCENTER","Workcenter")		
+				F.Intrinsic.Control.If(v.Args.Value.Trim,<>,"")
+					F.Intrinsic.String.Build("select MACHINE from WORKCENTERS where MACHINE = '{0}';",v.Args.Value.Trim,v.Local.sQuery)
+					F.ODBC.Connection!myCon.OpenRecordsetRO("rstWorkcenter",v.Local.sQuery)
+					F.Intrinsic.Control.If(v.ODBC.myCon!rstWorkcenter.EOF)
+						Gui.F_Tooling..ShowAlert("myAlert","Tooling Part Dashboard (6059)","Workcenter is invalid")
+						Gui.F_Tooling..UpdateAlertProperty("myAlert",v.Enum.AlertPropertyNames!SvgImage,v.Enum.Image!ERROR_COLOR)
+					F.Intrinsic.Control.EndIf
+					F.ODBC.myCon!rstWorkcenter.Close
+				F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndSelect
+		
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.gsgcToolingOpen_CellValueChanged.End
+
+Program.Sub.tabTooling_Click.Start
+	F.Intrinsic.Control.Try
+	
+		F.Intrinsic.Control.If(V.Screen.F_Tooling!tabTooling.Tab,=,0)
+			Gui.F_Tooling.frame1.Visible(False)
+		F.Intrinsic.Control.ElseIf(V.Screen.F_Tooling!tabTooling.Tab,=,1)
+			Gui.F_Tooling.frame1.Visible(True)
+		F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError)
+		F.Intrinsic.UI.Msgbox(V.Global.sError)
+		F.Intrinsic.Control.End()
+	F.Intrinsic.Control.EndTry
+Program.Sub.tabTooling_Click.End
+
+Program.Sub.Comments.Start
+${$0$}$$}$$}$12:00:00 AM$}$False
+${$5$}$2.0.0.0$}$2
+${$6$}$tdjohan$}$20221011151809119$}$8rAQhOSvlohpQhMDm1j544LwmwXnRbkhJksbl1a2W8m4XywaL1V1ZJNA5odegDrofqhh/2FuYzg=
+Program.Sub.Comments.End
